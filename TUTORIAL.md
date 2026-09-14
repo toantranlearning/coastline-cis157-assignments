@@ -14,11 +14,11 @@ Python is already installed here. Nothing to download, nothing to configure.
 bash scripts/start.sh
 ```
 
-Run this **every time** you open the project, not just the first time. It is quick, and it only does what is still needed:
+Run this **every time** you open the project, not just the first time. It is quick, and its main job is tidying up after Cloud Shell:
 
-- leaves you with exactly **one copy** of your assignments, and it is the copy your work is in. A second click on the launch link makes a spare folder, and Cloud Shell opens that spare, so it is easy to end up typing into the wrong one without noticing. This sorts it out for you.
-- turns the editor's **AI code suggestions off**, because in this course you write every line you submit.
-- confirms **Python** is ready and tells you where your folder is.
+- **Clears out the spare copies Google leaves behind.** Every time the launch link is opened, Cloud Shell clones the course folder again instead of reusing the one you already have, and it shows you the new one. That is simply how it works, not something you did wrong, but the copies pile up and you can end up typing into one while your work sits in another. This leaves you with exactly one copy, the one your work is in.
+- **Turns the editor's AI code suggestions off**, because in this course you write every line you submit.
+- **Confirms Python is ready** and tells you where your folder is.
 
 When it reports the Python version, you are set for the entire term. Click **Next**.
 
@@ -32,7 +32,7 @@ The screen has three parts:
 
 Each folder holds the starter file you complete and an `assignment.md` with the full instructions, the same ones posted in Canvas.
 
-<walkthrough-footnote>Click the launch link only once. If you click it again later, Cloud Shell makes a second copy of the folder, which is what the start command tidies up. Next time, just reopen this Cloud Shell tab, or go to shell.cloud.google.com and run the start command again.</walkthrough-footnote>
+<walkthrough-footnote>Use the launch link as often as you like; the start command clears up the extra copies it leaves. To skip the extra copy entirely, come back by reopening this Cloud Shell tab or going to shell.cloud.google.com, and run the start command there.</walkthrough-footnote>
 
 ## Run your first program
 

@@ -15,6 +15,8 @@ Two ways to get a working Python setup. Pick one.
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/toantranlearning/coastline-cis157-assignments&cloudshell_tutorial=TUTORIAL.md)
 
+Use that button **once**, to set up. After that, come back through [shell.cloud.google.com](https://shell.cloud.google.com/), which reopens the machine you already have with your work on it. The setup button copies the course folder in fresh every time it is opened, so returning that way just leaves spare copies for `start.sh` to clear up.
+
 > [!WARNING]
 > **Sign in with a personal Google account, not your Coastline one.** Google blocks Cloud Shell for Workspace for Education accounts by default, and it is not available to anyone under 18. If the button refuses to open for you, message me in the Canvas Inbox and say which account you tried. Full setup notes are on the Setting Up Google Cloud Shell page in Canvas.
 
@@ -22,7 +24,7 @@ Two ways to get a working Python setup. Pick one.
 
 Either way, once you can run `print("hello")` you are set for the whole term.
 
-<sub>Cloud Shell users: each time you open the project, run `bash scripts/start.sh` first. It leaves you with a single copy of your assignments, the one your work is in, turns the editor's AI suggestions off, and confirms Python is ready.</sub>
+<sub>Cloud Shell users: each time you open the project, run `bash scripts/start.sh` first. Cloud Shell clones a fresh copy of the folder every time the setup link is opened, so this clears out the spares and keeps the one your work is in. It also turns the editor's AI suggestions off and confirms Python is ready.</sub>
 
 ## What is in here
 
