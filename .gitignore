@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Output your programs write while you work.
+# M14 creates this one; delete it and re-run any time.
+findings.txt
+
+# Virtual environments, if you make one
+.venv/
+venv/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+~$*
+.idea/
+.vscode/
