@@ -16,4 +16,9 @@ Thumbs.db
 *.swp
 ~$*
 .idea/
-.vscode/
+
+# Personal editor state is ignored, but the one shared workspace setting
+# is tracked: it makes the editor's Run button work from each assignment's
+# own folder, which M14 depends on.
+.vscode/*
+!.vscode/settings.json

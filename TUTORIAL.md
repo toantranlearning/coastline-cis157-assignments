@@ -42,7 +42,9 @@ python3 m01_firstname_lastname.py
 
 That is the M01 starter, and it prints a greeting. Programs that ask you questions work here too: when one stops and waits, type your answer into the terminal and press **Enter**.
 
-**Always move into the assignment's folder first.** That is what the `cd` command does, and it matters: in M14 your program opens a log file by name, and it looks for that file in whichever folder the terminal is sitting in. Work from inside the folder and everything finds everything else.
+**Always move into the assignment's folder first.** That is what the `cd` command does, and it matters: in M14 your program opens a log file by name, and it looks for that file in whichever folder the terminal is sitting in. Work from inside the folder and everything finds everything else. To go back up a level later, run `cd ..`.
+
+**You can also run without the terminal.** With a `.py` file open in the editor, the **Run** triangle at the top right runs it, and its output appears in the panel below. Use whichever you prefer. The terminal is worth learning because it is what you will meet in every programming job, but nothing in this course requires it.
 
 Now open it and read it. <walkthrough-editor-open-file filePath="m01/m01_firstname_lastname.py">Open the M01 starter</walkthrough-editor-open-file>. Every assignment file has the same three parts: code to **read**, code to **modify**, and pseudocode you turn into your own code.
 
@@ -59,6 +61,16 @@ You can also right-click the file in the list and choose **Rename**.
 Then fill in the header at the top of the file: your name, the date, a one-line description, and the reflection. Save with **Ctrl-S**, or **Cmd-S** on a Mac.
 
 <walkthrough-footnote>Keep the .py ending. A file saved as m01_jane_doe.py.txt will not run, and I cannot grade it.</walkthrough-footnote>
+
+## When something goes wrong
+
+Two tools, and you will want both before the term is out.
+
+**Read the error.** When a program fails, Python prints a traceback in the output panel. The last line names the problem and the line above it points at your code. That is usually enough.
+
+**Step through it.** From M04 onward, when loops arrive, it helps to watch your program run one line at a time. Click in the narrow margin to the left of a line number to set a **breakpoint**, a red dot where the program will pause. Then open the <walkthrough-editor-spotlight spotlightId="activity-bar-debug">Run and Debug</walkthrough-editor-spotlight> panel and start it. The program stops at your dot, and the panel lists every variable and its current value, updating as you step forward.
+
+Watching two values trade places is worth more than reading about it. You do not need this for M01. Come back when you reach M04.
 
 ## Hand it in
 

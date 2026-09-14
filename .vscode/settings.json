@@ -1,0 +1,7 @@
+{
+  // Run each program from the folder it lives in, not from the top of the
+  // repository. M14 opens server.log by name, and without this the Run
+  // button would look for it in the wrong place and report that the file
+  // does not exist.
+  "python.terminal.executeInFileDir": true
+}
