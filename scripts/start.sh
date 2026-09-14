@@ -4,10 +4,15 @@
 # It checks what is already done and only does the missing parts, so it is
 # safe to run every time you open the project.
 
-# Where the working copy lives (its natural clone path).
-BASE="$HOME/cloudshell_open/coastline-cis157-assignments"
 # This script sits in scripts/, so the project root is its parent.
 SELF="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# Everything below is derived from the clone's own remote, so this script is
+# the same file in every course repository. Nothing here names a course.
+REPO_URL="$(git -C "$SELF" remote get-url origin 2>/dev/null)"
+REPO_NAME="$(basename "${REPO_URL%.git}")"
+[ -n "$REPO_NAME" ] || { echo "Could not work out which repository this is. Is it a git clone?"; exit 1; }
+# Where the working copy lives (its natural clone path).
+BASE="$HOME/cloudshell_open/$REPO_NAME"
 # Where the terminal was before any cd, so we can tell at the end whether it
 # is still sitting somewhere sensible.
 LAUNCH_DIR="$PWD"
