@@ -22,6 +22,8 @@ Two ways to get a working Python setup. Pick one.
 
 Either way, once you can run `print("hello")` you are set for the whole term.
 
+<sub>Cloud Shell users: each time you open the project, run `bash scripts/start.sh` first. It keeps a single copy of your assignments if a second click on the launch link made a spare, turns the editor's AI suggestions off, and confirms Python is ready. A spare folder containing your work is never deleted, only reported.</sub>
+
 ## What is in here
 
 One folder per assignment, named the way the course names them.

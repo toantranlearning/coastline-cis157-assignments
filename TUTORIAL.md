@@ -8,13 +8,19 @@ You are signed in to Google, which is what makes this Cloud Shell yours. Nobody 
 
 Python is already installed here. Nothing to download, nothing to configure.
 
-**Check that it is working.** Click the run icon on the command below:
+**Start by running this.** Click the run icon on the command below:
 
 ```bash
-python3 --version
+bash scripts/start.sh
 ```
 
-If it prints a version number starting with 3, you are set for the entire term. Click **Next**.
+Run this **every time** you open the project, not just the first time. It is quick, and it only does what is still needed:
+
+- keeps exactly **one copy** of your assignments, removing any spare that a second click on the launch link created. A spare folder that has work in it is never deleted, only pointed out, so nothing you wrote can be lost this way.
+- turns the editor's **AI code suggestions off**, because in this course you write every line you submit.
+- confirms **Python** is ready and tells you where your folder is.
+
+When it reports the Python version, you are set for the entire term. Click **Next**.
 
 ## What you are looking at
 
@@ -26,7 +32,7 @@ The screen has three parts:
 
 Each folder holds the starter file you complete and an `assignment.md` with the full instructions, the same ones posted in Canvas.
 
-<walkthrough-footnote>Click the launch link only once. If you click it again later, Cloud Shell makes a second copy of the folder. Next time, just reopen this Cloud Shell tab, or go to shell.cloud.google.com.</walkthrough-footnote>
+<walkthrough-footnote>Click the launch link only once. If you click it again later, Cloud Shell makes a second copy of the folder, which is what the start command tidies up. Next time, just reopen this Cloud Shell tab, or go to shell.cloud.google.com and run the start command again.</walkthrough-footnote>
 
 ## Run your first program
 
@@ -107,7 +113,7 @@ You can run a program, edit it, rename it, and download it to hand in. That is t
 
 Each week, `cd` into that assignment's folder, read its `assignment.md`, and check your output against the **Expected output** section before you submit. To get back to the top from inside a folder, run `cd ..`.
 
-One rule, and it does not change: **you write every line you submit, and you must be able to explain any line I ask about.** AI is welcome as a tutor to explain a concept or an error message. It does not write your code.
+One rule, and it does not change: **you write every line you submit, and you must be able to explain any line I ask about.** AI is welcome as a tutor to explain a concept or an error message. It does not write your code. The start command switches the editor's AI suggestions off for you, so you are not fighting a tool that wants to finish your sentences while you are learning to write them.
 
 If you get stuck, post in the week's discussion in Canvas, sharing no more than three lines of code, or message me in the Canvas Inbox.
 
