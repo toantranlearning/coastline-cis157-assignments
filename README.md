@@ -11,11 +11,13 @@ Everything you need to write your programs is here. Everything that decides your
 
 Two ways to get a working Python setup. Pick one.
 
-**1. No install, in a browser tab.** This button opens Google Cloud Shell with every starter file already cloned in and a short guided walkthrough open beside the editor. Python is already installed. Click it once, follow the panel, and you are ready to work.
+**1. No install, in a browser tab.** Google Cloud Shell gives you a full Linux machine with Python already on it. There are two links, and which one you use depends on whether it is your first time.
+
+**The first time, use the setup link.** It clones this repository into Cloud Shell and opens a short walkthrough beside the editor. Follow the panel and you are ready to work.
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/toantranlearning/coastline-cis157-assignments&cloudshell_tutorial=TUTORIAL.md)
 
-Use that button **once**, to set up. After that, come back through [shell.cloud.google.com](https://shell.cloud.google.com/), which reopens the machine you already have with your work on it. The setup button copies the course folder in fresh every time it is opened, so returning that way just leaves spare copies for `start.sh` to clear up.
+**Every time after that, use the launch link.** [shell.cloud.google.com](https://shell.cloud.google.com/) just opens Cloud Shell: the machine you already have, with your work on it. Nothing is cloned and nothing is overwritten. Coming back through the setup link instead clones the folder again, which is what leaves spare copies for `start.sh` to clear up.
 
 > [!WARNING]
 > **Sign in with a personal Google account, not your Coastline one.** Google blocks Cloud Shell for Workspace for Education accounts by default, and it is not available to anyone under 18. If the button refuses to open for you, message me in the Canvas Inbox and say which account you tried. Full setup notes are on the Setting Up Google Cloud Shell page in Canvas.
