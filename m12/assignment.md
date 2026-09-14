@@ -29,12 +29,14 @@ Open notes and open book are both fine. Respond in your own words; do not copy f
 
 **Acceptable AI use.** Itemized for this course; the syllabus policy governs.
 
-> [!TIP] These uses are permitted
+> [!TIP]
+> **These uses are permitted**
 > - Asking an AI to explain a course concept or a Python error message, in general terms, while you study.
 > - Grammar and spelling help on the written reflection in your header.
 > - After your program works: asking an AI to show a different approach, described in your own words, to compare with what you wrote.
 
-> [!CAUTION] These uses are not permitted
+> [!CAUTION]
+> **These uses are not permitted**
 > - Generating any part of the code or reflection you submit.
 > - Pasting the assignment page or the starter file into an AI tool.
 > - Submitting or paraphrasing AI output as your own work.
