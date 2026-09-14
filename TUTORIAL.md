@@ -16,7 +16,7 @@ bash scripts/start.sh
 
 Run this **every time** you open the project, not just the first time. It is quick, and it only does what is still needed:
 
-- keeps exactly **one copy** of your assignments, removing any spare that a second click on the launch link created. A spare folder that has work in it is never deleted, only pointed out, so nothing you wrote can be lost this way.
+- leaves you with exactly **one copy** of your assignments, and it is the copy your work is in. A second click on the launch link makes a spare folder, and Cloud Shell opens that spare, so it is easy to end up typing into the wrong one without noticing. This sorts it out for you.
 - turns the editor's **AI code suggestions off**, because in this course you write every line you submit.
 - confirms **Python** is ready and tells you where your folder is.
 

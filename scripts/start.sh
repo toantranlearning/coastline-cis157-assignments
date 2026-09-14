@@ -31,23 +31,39 @@ if [ ! -d "$BASE" ] && [ -d "$SELF" ] && [ "$SELF" != "$BASE" ]; then
   mv "$SELF" "$BASE"
 fi
 
-# Keep a single copy. Clicking the launch link more than once makes extra
-# folders named after the repo plus a suffix (name-0, name-1, and so on).
+# Keep exactly ONE copy, and make it the one with your work in it.
 #
-# These folders can hold your coursework, so a duplicate is only removed when
-# it contains NO work of your own: no edits, no new files. Anything with work
-# in it is left alone and reported, so you can rescue it yourself.
-kept_work=""
+# Clicking the launch link again makes another folder named after the repo
+# plus a suffix (name-0, name-1, ...), and Cloud Shell opens that new one, so
+# it is possible to spend a session typing into a copy you did not mean to use.
+# Deleting duplicates blindly can therefore throw away real work; keeping them
+# scatters your work across folders, which is worse. So: find the copy that has
+# work in it, make that one canonical, and remove the rest.
+dirty=""
 for d in "$BASE"*; do
   [ -d "$d" ] || continue
-  [ "$d" = "$BASE" ] && continue
-  if [ -z "$(git -C "$d" status --porcelain 2>/dev/null)" ]; then
-    rm -rf "$d"
-    echo "Removed an unused duplicate copy: $(basename "$d")"
-  else
-    kept_work="$kept_work $(basename "$d")"
-  fi
+  [ -n "$(git -C "$d" status --porcelain 2>/dev/null)" ] && dirty="$dirty $d"
 done
+
+set -- $dirty
+if [ "$#" -gt 1 ]; then
+  # Work in more than one copy. A script should not guess which to keep, and
+  # merging them is not something to do behind your back.
+  echo "More than one copy has work in it, so none were removed:"
+  for d in "$@"; do echo "  $(basename "$d")"; done
+  echo "Move what you want to keep into one folder, delete the others, then run this again."
+else
+  # The keeper is the copy with work, or the canonical one if no copy has any.
+  keeper="${1:-$BASE}"
+  if [ "$keeper" != "$BASE" ]; then
+    rm -rf "$BASE"
+    mv "$keeper" "$BASE"
+    echo "Your work was in $(basename "$keeper"); that copy is now the project folder."
+  fi
+  for d in "$BASE"*; do
+    [ -d "$d" ] && [ "$d" != "$BASE" ] && rm -rf "$d" && echo "Removed an unused duplicate copy: $(basename "$d")"
+  done
+fi
 
 cd "$BASE" 2>/dev/null || cd "$SELF"
 
@@ -88,14 +104,6 @@ if command -v python3 >/dev/null 2>&1; then
 else
   echo "Python 3 was not found, which is unexpected in Cloud Shell. Message your instructor."
   exit 1
-fi
-
-# Anything rescued from a duplicate needs the student's attention.
-if [ -n "$kept_work" ]; then
-  echo
-  echo "Heads up: these extra copies have changes in them, so they were NOT removed:"
-  for name in $kept_work; do echo "  $name"; done
-  echo "Copy anything you want to keep into $BASE, then delete the extra folder."
 fi
 
 # A script cannot move its parent shell, so say what to run.
