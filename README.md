@@ -7,6 +7,21 @@ Everything you need to write your programs is here. Everything that decides your
 > [!IMPORTANT]
 > **Canvas is the source of truth.** Due dates, grades, announcements, discussions, quizzes and exams all live there, and you submit your finished work there. The instructions in this repository are a convenience copy. If a page here and a page in Canvas ever disagree, Canvas wins, and please tell me so I can fix it.
 
+## Start here
+
+Two ways to get a working Python setup. Pick one.
+
+**1. No install, in a browser tab.** This button opens Google Cloud Shell with every starter file already cloned in and a short guided walkthrough open beside the editor. Python is already installed. Click it once, follow the panel, and you are ready to work.
+
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/toantranlearning/coastline-cis157-assignments&cloudshell_tutorial=TUTORIAL.md)
+
+> [!WARNING]
+> **Sign in with a personal Google account, not your Coastline one.** Google blocks Cloud Shell for Workspace for Education accounts by default, and it is not available to anyone under 18. If the button refuses to open for you, message me in the Canvas Inbox and say which account you tried. Full setup notes are on the Setting Up Google Cloud Shell page in Canvas.
+
+**2. Install it on your own computer.** [Download Thonny](https://thonny.org/). One installer, Python included, nothing to configure. This is the course standard and it is the better option if your computer allows it: it opens faster, works offline, and its debugger is friendlier while loops are new.
+
+Either way, once you can run `print("hello")` you are set for the whole term.
+
 ## What is in here
 
 One folder per assignment, named the way the course names them.
@@ -26,7 +41,7 @@ Two assignments need a second file, and both are already in their folder:
 
 ## How to use it
 
-You do not need Git or a GitHub account for this course. Either way works:
+If you used the Cloud Shell button above, the files are already there and you can skip this section. Otherwise, you do not need Git or a GitHub account for this course. Either way works:
 
 **The simple way.** Open the folder for this week's assignment, open the starter file, and use the **Download raw file** button. Do the same for `huntkit.py` or `server.log` if the folder has one.
 
@@ -51,12 +66,6 @@ git pull
 4. Run it and check your output against the **Expected output** section of that folder's `assignment.md`.
 5. Fill in the header at the top of the file: your name, the date, a one-line description, and the reflection.
 6. **Upload the single `.py` file to Canvas.** No documents, no screenshots, no pasted text. I run your file.
-
-## Setting up Python
-
-The course-standard editor is [Thonny](https://thonny.org/), whose installer includes Python itself, so there is nothing else to download or configure.
-
-If your computer will not let you install software, a Chromebook or a managed work machine for example, the course orientation module in Canvas has a page on using Google Cloud Shell, which gives you a full Linux machine with Python already on it, in a browser tab, for free.
 
 ## One rule
 
