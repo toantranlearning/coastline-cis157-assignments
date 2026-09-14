@@ -12,8 +12,6 @@ Overnight, Harborwatch's alert feed dumped a pile of severity scores (CVSS-style
 
 - [Starter file](m05_firstname_lastname.py). A header docstring to complete and three parts: working code to read (the overnight scores, pre-loaded and printed by a loop), working code to modify (an `append()` for the morning's phoned-in scores), and pseudocode to turn into your own code (the bubble sort and the triage report).
 
-If you have not set up Thonny yet, do that first: Course Materials, Software & Technology page in Canvas.
-
 ## Instructions
 
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
@@ -78,6 +76,6 @@ Triage order (worst first):
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm three things: the file is renamed with your own name, it runs in Thonny without errors and matches the expected output, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

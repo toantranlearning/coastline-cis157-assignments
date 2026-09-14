@@ -13,8 +13,6 @@ At **Harborwatch Security**, the utilities you built back in M06 (dwell-time mat
 - [Module file](huntkit.py). The shared `huntkit` module and the home of Parts 1 and 2: a finished function and self-test to read and run, one line to modify, and full line-by-line pseudocode for `severity_label()` to turn into code.
 - [Starter file](m09_firstname_lastname.py). A header docstring to complete and Part 3: your main program, five steps, each written out in pseudocode for you to turn into code.
 
-If you have not set up Thonny yet, do that first: Course Materials, Software & Technology page in Canvas.
-
 ## Instructions
 
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. This week the first two steps happen in the module file and the third in your main file, the same split every real Python project has.
@@ -26,7 +24,7 @@ Every assignment in this course follows the same three-step rhythm: **read** wor
 5. Run your main file and check it against the second expected output block below. The first time it imports `huntkit`, Python drops a `__pycache__` folder next to your files: the compiled copy it caches to speed up later imports. Leave it alone; it is not part of your submission.
 6. Complete the header at the top of your main file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. Every program you submit in this course carries this header; professionals sign their work, and so do you.
 
-**Try pip once (nothing to submit).** `math` and `platform` ship with Python, but most of the Python world lives in packages you install with **pip**. In Thonny, open **Tools > Manage packages**, search for `requests` (the standard library for talking to web APIs), and click **Install**; the terminal equivalent is `pip install requests`. Watch what pip reports, then uninstall it the same way if you like. This assignment deliberately needs no third-party package (everything above runs offline), but installing one is a five-minute skill you will use constantly after this course.
+**Try pip once (nothing to submit).** `math` and `platform` ship with Python, but most of the Python world lives in packages you install with **pip**. Run `pip install requests` in a terminal. (In Thonny, the same thing lives under **Tools > Manage packages**: search for `requests` and click **Install**.) `requests` is the standard library for talking to web APIs. Watch what pip reports, then uninstall it the same way if you like. This assignment deliberately needs no third-party package (everything above runs offline), but installing one is a five-minute skill you will use constantly after this course.
 
 Open notes and open book are both fine. Respond in your own words; do not copy from other sources.
 
@@ -73,6 +71,6 @@ Workstation: macOS-26.6.1-arm64-arm-64bit
 
 Upload **two** `.py` files: no document, no screenshots, no `__pycache__` folder. They are the completed `huntkit.py`, still under its original name, and the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm three things: the main file is renamed with your own name while `huntkit.py` keeps its exact name, both files sit in the same folder and your main file runs in Thonny without errors and matches the expected output, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the main file is renamed with your own name while `huntkit.py` keeps its exact name, both files sit in the same folder and your main file runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

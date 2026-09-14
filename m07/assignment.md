@@ -29,7 +29,7 @@ The intel table your tool searches (in Part 2 you add one more record to it):
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m07_jane_doe.py` for Jane Doe. Keep the `m07_` prefix.
-2. **Read.** Open the file in Thonny and run it. Part 1 is already complete: the `INTEL` dictionary is the table above, and two working lines look up one indicator, first pulling out the whole record (a tuple, parentheses and all), then unpacking it into its three parts. Read the closing comment too: the records are tuples on purpose, because intel entries are evidence and should not be editable in place.
+2. **Read.** Open the file and run it. Part 1 is already complete: the `INTEL` dictionary is the table above, and two working lines look up one indicator, first pulling out the whole record (a tuple, parentheses and all), then unpacking it into its three parts. Read the closing comment too: the records are tuples on purpose, because intel entries are evidence and should not be editable in place.
 3. **Modify.** Part 2 gives you the pattern for a dictionary item assignment and one confirmed new record: indicator `198.51.100.23`, threat name `Qakbot loader`, confidence `High`, status `Active`. Add it to `INTEL` with one line of code.
 4. **Create.** Part 3 has no code yet: only pseudocode. Follow it line by line to build:
    1. A function `lookup_ioc(intel, indicator)` that looks the indicator up and returns its details.
@@ -88,6 +88,6 @@ A run with an indicator that is not in the table (for example `10.9.9.9`) prints
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm three things: the file is renamed with your own name, it runs in Thonny without errors and matches the expected output, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

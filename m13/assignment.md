@@ -79,6 +79,6 @@ Total platform users created: 4
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm four things: the file is renamed with your own name, it runs in Thonny without errors and matches the expected output, every header field contains your text rather than the placeholder text, and step 3f's pseudocode comments are your own writing.
+Before you upload, confirm four things: the file is renamed with your own name, it runs without errors and matches the expected output, every header field contains your text rather than the placeholder text, and step 3f's pseudocode comments are your own writing.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

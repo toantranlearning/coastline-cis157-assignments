@@ -127,6 +127,6 @@ You found the intruder. The network is secure -- you win!
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm three things: the file is renamed with your own name, it runs in Thonny without errors and plays a complete game (win and lose) in the format shown above, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and plays a complete game (win and lose) in the format shown above, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

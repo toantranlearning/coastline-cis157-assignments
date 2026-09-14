@@ -12,8 +12,6 @@ A Harborwatch client exported their gateway log to a pipe-delimited text dump an
 
 - [Starter file](m11_firstname_lastname.py). A header docstring to complete, the `records` list already loaded with the client's ten raw records (dirt included: do not edit the list), and three parts: working code to read, working code to modify, and pseudocode to turn into your own code.
 
-If you have not set up Thonny yet, do that first: Course Materials, Software & Technology page in Canvas.
-
 ## Instructions
 
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
@@ -75,6 +73,6 @@ Failed logins: 4
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm three things: the file is renamed with your own name, it runs in Thonny without errors and matches the expected output, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

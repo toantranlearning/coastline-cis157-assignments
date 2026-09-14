@@ -13,8 +13,6 @@ A client's server had a rough day, and this morning the raw log landed on **Harb
 - [Starter file](m14_firstname_lastname.py). A header docstring to complete and three parts: working code to read, working code to modify, and pseudocode to turn into your own code.
 - [server.log](server.log). The evidence: one day of server activity, routine messages with errors and warnings buried in them. Save it in the same folder as your program.
 
-If you have not set up Thonny yet, do that first: Course Materials, Software & Technology page in Canvas.
-
 ## Instructions
 
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
@@ -62,6 +60,6 @@ Findings report written to findings.txt
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed. Do not upload `findings.txt`: anyone who runs your program regenerates it, so the report is your program's output, not a separate deliverable.
 
-Before you upload, confirm three things: the file is renamed with your own name, it runs in Thonny without errors and matches the expected output, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

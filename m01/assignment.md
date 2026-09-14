@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will write and run your first Python program in Thonny. The program itself is two lines; the point is everything around it: proving that Python runs on your machine, that you can get a program from your keyboard to the screen, and that you can follow the workflow every assignment in this course uses: download the starter, complete the numbered requirements, verify your output, and sign your work in the header. Get this loop working now, while the code is trivial, and the rest of the course is about the code.
+You will write and run your first Python program. The program itself is two lines; the point is everything around it: proving that your Python setup works, that you can get a program from your keyboard to the screen, and that you can follow the workflow every assignment in this course uses: download the starter, complete the numbered requirements, verify your output, and sign your work in the header. Get this loop working now, while the code is trivial, and the rest of the course is about the code.
 
 ## Scenario
 
@@ -12,14 +12,12 @@ Welcome to your first day at **Harborwatch Security**, a small managed security 
 
 - [Starter file](m01_firstname_lastname.py). A header docstring to complete and three parts: working code to read, working code to modify, and pseudocode to turn into your own code.
 
-If you have not set up Thonny yet, do that first: Course Materials, Software & Technology page in Canvas.
-
 ## Instructions
 
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m01_jane_doe.py` for Jane Doe. Keep the `m01_` prefix.
-2. **Read.** Open the file in Thonny and press the green **Run** button (or F5). Part 1 is already complete. You should see `Hello, World!` in the Shell pane. If you do, your Python environment works; that was half the assignment.
+2. **Read.** Open the file and run it. Part 1 is already complete. You should see `Hello, World!` in the output. If you do, your Python environment works; that was half the assignment.
 3. **Modify.** Part 2 prints the team banner with the wrong shift name. Change `night shift` to `day shift` and run again.
 4. **Create.** Part 3 has no code yet, only pseudocode. Follow it line by line to print a greeting that includes a name. `Hello, Alice! Welcome to the world of Python!` is the pattern; any name works.
 5. Run the program one last time and check that all three lines print, in order, and match the expected output below.
@@ -57,6 +55,6 @@ Hello, Alice! Welcome to the world of Python!
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm three things: the file is renamed with your own name, it runs in Thonny without errors and matches the expected output, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
