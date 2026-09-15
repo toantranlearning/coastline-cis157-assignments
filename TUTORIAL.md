@@ -43,7 +43,7 @@ Each folder holds the starter file you complete and an `assignment.md` with the 
 Every assignment works the same way. Start by running the starter before you change anything, so you can see what it already does.
 
 1. In the file list on the left, click the `m01` folder, then click `m01_firstname_lastname.py`. It opens in the editor. This shortcut does the same: <walkthrough-editor-open-file filePath="m01/m01_firstname_lastname.py">open the M01 starter</walkthrough-editor-open-file>.
-2. Click the **Run** triangle at the top right of the editor. The program's output appears in a panel below it.
+2. With that file showing in the editor, click the **Run** triangle at the top right. Run always runs the tab in front, so if you have the instructions or another file open too, click the `.py` tab first. The program's output appears in a panel below it.
 
 That is the M01 starter, and it prints a greeting. Programs that ask you questions work here too: when one stops and waits, type your answer into that panel and press **Enter**.
 
