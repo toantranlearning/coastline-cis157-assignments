@@ -19,6 +19,9 @@ Two ways to get a working Python setup. Pick one.
 - **Set up**, on your first visit. It signs you in, builds your machine, and puts a copy of the course content in it ready to use: every starter file and every assignment's instructions. A short walkthrough opens beside the editor.
 - **Launch**, every visit after that. It reopens that same folder with your work in it, and brings the walkthrough back so you have the shortcuts to hand. Nothing is copied twice.
 
+> [!WARNING]
+> **When it opens, three clicks if they appear, then one command.** Click **Trust Repository** if Cloud Shell asks whether to trust the repository. Click **Approve** if it asks for permissions. Dismiss any **Gemini Code Assist** notice; you do not need it. Then, in the terminal, run `source scripts/start.sh` and press Enter. **Do not skip that command, and run it every time you open the project.** It keeps one copy of your work, turns the AI suggestions off, confirms Python, and puts your terminal in the right folder.
+
 If Cloud Shell will not open for you, message me in the Canvas Inbox and say which account you tried.
 
 **2. Install it on your own computer.** [Download Thonny](https://thonny.org/). One installer, Python included, nothing to configure. This is the course standard and it is the better option if your computer allows it: it opens faster, works offline, and its debugger is friendlier while loops are new.

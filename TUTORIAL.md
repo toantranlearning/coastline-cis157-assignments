@@ -8,7 +8,9 @@ You are signed in to Google, which is what makes this Cloud Shell yours. Nobody 
 
 Python is already installed here. Nothing to download, nothing to configure.
 
-**Start by running this.** Click the icon beside the command below. That only pastes the command into the terminal; press **Enter** to run it.
+If a **Gemini Code Assist** notice popped up, dismiss it. You do not need it, and the command below turns it off.
+
+**Start by running this. Do not skip it.** Click the icon beside the command below. That only pastes the command into the terminal; press **Enter** to run it.
 
 ```bash
 source scripts/start.sh
@@ -40,6 +42,15 @@ Each folder holds the starter file you complete and an `assignment.md` with the 
 
 Every assignment works the same way. Start by running the starter before you change anything, so you can see what it already does.
 
+1. In the file list on the left, click the `m01` folder, then click `m01_firstname_lastname.py`. It opens in the editor. This shortcut does the same: <walkthrough-editor-open-file filePath="m01/m01_firstname_lastname.py">open the M01 starter</walkthrough-editor-open-file>.
+2. Click the **Run** triangle at the top right of the editor. The program's output appears in a panel below it.
+
+That is the M01 starter, and it prints a greeting. Programs that ask you questions work here too: when one stops and waits, type your answer into that panel and press **Enter**.
+
+Read the file while it is open. Every assignment file has the same three parts: code to **read**, code to **modify**, and pseudocode you turn into your own code.
+
+**If you prefer the terminal**, move into the assignment's folder and run the file by name:
+
 ```bash
 cd m01
 ```
@@ -48,33 +59,37 @@ cd m01
 python3 m01_firstname_lastname.py
 ```
 
-That is the M01 starter, and it prints a greeting. Programs that ask you questions work here too: when one stops and waits, type your answer into the terminal and press **Enter**.
+Being in the right folder matters whenever a program opens a file that sits beside it, which M14 does. The Run button handles that for you; in the terminal, `cd` first. To go back up a level later, run `cd ..`.
 
-**Always move into the assignment's folder first.** That is what the `cd` command does, and it matters: in M14 your program opens a log file by name, and it looks for that file in whichever folder the terminal is sitting in. Work from inside the folder and everything finds everything else. To go back up a level later, run `cd ..`.
-
-**You can also run without the terminal.** With a `.py` file open in the editor, the **Run** triangle at the top right runs it, and its output appears in the panel below. Use whichever you prefer. The terminal is worth learning because it is what you will meet in every programming job, but nothing in this course requires it.
-
-Now open it and read it. <walkthrough-editor-open-file filePath="m01/m01_firstname_lastname.py">Open the M01 starter</walkthrough-editor-open-file>. Every assignment file has the same three parts: code to **read**, code to **modify**, and pseudocode you turn into your own code.
+<walkthrough-footnote>If the Run button ever reports that a file such as server.log cannot be found, use the terminal for that assignment: cd into its folder and run it there.</walkthrough-footnote>
 
 ## Put your name on it
 
-Before you do the work, rename the file with your own name, all lowercase, keeping the prefix. Jane Doe would run:
+Before you do the work, rename the file with your own name, all lowercase, keeping the prefix.
+
+1. Right-click the file in the file list and choose **Rename**. Jane Doe would name it `m01_jane_doe.py`.
+2. Fill in the header at the top of the file: your name, the date, a one-line description, and the reflection.
+3. Save with **Ctrl-S**, or **Cmd-S** on a Mac.
+
+The terminal does the rename too, if you are already there:
 
 ```bash
 mv m01_firstname_lastname.py m01_jane_doe.py
 ```
 
-You can also right-click the file in the list and choose **Rename**.
-
-Then fill in the header at the top of the file: your name, the date, a one-line description, and the reflection. Save with **Ctrl-S**, or **Cmd-S** on a Mac.
-
 <walkthrough-footnote>Keep the .py ending. A file saved as m01_jane_doe.py.txt will not run, and I cannot grade it.</walkthrough-footnote>
 
 ## When something goes wrong
 
-Two tools, and you will want both before the term is out.
+Three tools, and you will want all of them before the term is out.
 
 **Read the error.** When a program fails, Python prints a traceback in the output panel. The last line names the problem and the line above it points at your code. That is usually enough.
+
+**Undo a change.** Open the <walkthrough-editor-spotlight spotlightId="activity-bar-scm">Source Control</walkthrough-editor-spotlight> panel. It lists every file you have changed, and clicking one shows exactly what changed, old on the left and new on the right. Hover a file and click its discard arrow to put that file back to the starter you were given. The terminal equivalent restores a whole assignment folder:
+
+```bash
+bash scripts/reset.sh --starter m01
+```
 
 **Step through it.** From M04 onward, when loops arrive, it helps to watch your program run one line at a time. Click in the narrow margin to the left of a line number to set a **breakpoint**, a red dot where the program will pause. Then open the <walkthrough-editor-spotlight spotlightId="activity-bar-debug">Run and Debug</walkthrough-editor-spotlight> panel and start it. The program stops at your dot, and the panel lists every variable and its current value, updating as you step forward.
 
