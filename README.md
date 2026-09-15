@@ -9,24 +9,23 @@ Everything you need to write your programs is here. Everything that decides your
 
 ## Start here
 
+[![Set up Cloud Shell](https://img.shields.io/badge/Set_up_Cloud_Shell-first_visit-0b4f8a?style=for-the-badge&logo=googlecloud&logoColor=white)](https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/toantranlearning/coastline-cis157-assignments&cloudshell_tutorial=TUTORIAL.md)
+[![Launch Cloud Shell](https://img.shields.io/badge/Launch_Cloud_Shell-every_visit_after-0b4f8a?style=for-the-badge&logo=googlecloud&logoColor=white)](https://shell.cloud.google.com/cloudshell/open?cloudshell_workspace=cloudshell_open/coastline-cis157-assignments&cloudshell_tutorial=TUTORIAL.md)
+
 Two ways to get a working Python setup. Pick one.
 
-**1. No install, in a browser tab.** Google Cloud Shell gives you a full Linux machine with Python already on it. There are two links, and which one you use depends on whether it is your first time.
+**1. No install, in a browser tab.** Google Cloud Shell gives you a full Linux machine with Python already on it. The two buttons above are the whole workflow:
 
-**The first time, use the setup link.** It clones this repository into Cloud Shell and opens a short walkthrough beside the editor. Follow the panel and you are ready to work.
+- **Set up**, on your first visit. It signs you in, builds your machine, and puts a copy of the course content in it ready to use: every starter file and every assignment's instructions. A short walkthrough opens beside the editor.
+- **Launch**, every visit after that. It reopens that same folder with your work in it, and brings the walkthrough back so you have the shortcuts to hand. Nothing is copied twice.
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/toantranlearning/coastline-cis157-assignments&cloudshell_tutorial=TUTORIAL.md)
-
-**Every time after that, use the launch link.** [shell.cloud.google.com](https://shell.cloud.google.com/) just opens Cloud Shell: the machine you already have, with your work on it. Nothing is cloned and nothing is overwritten. Coming back through the setup link instead clones the folder again, which is what leaves spare copies for `start.sh` to clear up.
-
-> [!WARNING]
-> **Sign in with a personal Google account, not your Coastline one.** Google blocks Cloud Shell for Workspace for Education accounts by default, and it is not available to anyone under 18. If the button refuses to open for you, message me in the Canvas Inbox and say which account you tried. Full setup notes are on the Setting Up Google Cloud Shell page in Canvas.
+If Cloud Shell will not open for you, message me in the Canvas Inbox and say which account you tried.
 
 **2. Install it on your own computer.** [Download Thonny](https://thonny.org/). One installer, Python included, nothing to configure. This is the course standard and it is the better option if your computer allows it: it opens faster, works offline, and its debugger is friendlier while loops are new.
 
 Either way, once you can run `print("hello")` you are set for the whole term.
 
-<sub>Cloud Shell users: each time you open the project, run `bash scripts/start.sh` first. Cloud Shell clones a fresh copy of the folder every time the setup link is opened, so this clears out the spares and keeps the one your work is in. It also turns the editor's AI suggestions off and confirms Python is ready.</sub>
+<sub>Cloud Shell users: each time you open the project, run `source scripts/start.sh` first. Cloud Shell clones a fresh copy of the folder every time the Set up button is used, so this clears out the spares, keeps the one your work is in, and moves your terminal into it. It also turns the editor's AI suggestions off and confirms Python is ready.</sub>
 
 ## What is in here
 
@@ -47,7 +46,7 @@ Two assignments need a second file, and both are already in their folder:
 
 ## How to use it
 
-If you used the Cloud Shell button above, the files are already there and you can skip this section. Otherwise, you do not need Git or a GitHub account for this course. Either way works:
+If you used the Set up button above, the course content is already there and you can skip this section. Otherwise, you do not need Git or a GitHub account for this course. Either way works:
 
 **The simple way.** Open the folder for this week's assignment, open the starter file, and use the **Download raw file** button. Do the same for `huntkit.py` or `server.log` if the folder has one.
 

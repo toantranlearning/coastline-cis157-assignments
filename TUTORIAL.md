@@ -2,21 +2,23 @@
 
 <walkthrough-tutorial-duration duration="10"></walkthrough-tutorial-duration>
 
-Welcome to **CIS C157, Introduction to Python Programming**. You are looking at your own private copy of every starter file in the course, on a free Linux computer that Google runs for you.
+Welcome to **CIS C157, Introduction to Python Programming**. You are looking at your own private copy of the course content, every starter file and every assignment's instructions, ready to use on a free Linux computer that Google runs for you.
 
 You are signed in to Google, which is what makes this Cloud Shell yours. Nobody else can see or reach this copy, and you do **not** need a credit card or a paid trial for any of it. If a banner offers "$300 in free credits," close it. You do not need it.
 
 Python is already installed here. Nothing to download, nothing to configure.
 
-**Start by running this.** Click the run icon on the command below:
+**Start by running this.** Click the icon beside the command below. That only pastes the command into the terminal; press **Enter** to run it.
 
 ```bash
-bash scripts/start.sh
+source scripts/start.sh
 ```
+
+<walkthrough-footnote>Every command in this panel works the same way: the icon pastes it, Enter runs it.</walkthrough-footnote>
 
 Run this **every time** you open the project, not just the first time. It is quick, and its main job is tidying up after Cloud Shell:
 
-- **Clears out the spare copies Google leaves behind.** Every time the launch link is opened, Cloud Shell clones the course folder again instead of reusing the one you already have, and it shows you the new one. That is simply how it works, not something you did wrong, but the copies pile up and you can end up typing into one while your work sits in another. This leaves you with exactly one copy, the one your work is in.
+- **Clears out the spare copies Google leaves behind.** Every time the setup link is opened, Cloud Shell clones the course folder again instead of reusing the one you already have, and it shows you the new one. That is simply how it works, not something you did wrong, but the copies pile up and you can end up typing into one while your work sits in another. This leaves you with exactly one copy, the one your work is in, and moves your terminal into it.
 - **Turns the editor's AI code suggestions off**, because in this course you write every line you submit.
 - **Confirms Python is ready** and tells you where your folder is.
 
@@ -32,7 +34,7 @@ The screen has three parts:
 
 Each folder holds the starter file you complete and an `assignment.md` with the full instructions, the same ones posted in Canvas.
 
-<walkthrough-footnote>Use the launch link as often as you like; the start command clears up the extra copies it leaves. To skip the extra copy entirely, come back by reopening this Cloud Shell tab or going to shell.cloud.google.com, and run the start command there.</walkthrough-footnote>
+<walkthrough-footnote>Come back through the Launch button on the course page or in the README: it reopens this folder and this panel without making another copy. The Set up button makes a fresh copy every time it is used, so if you use it again by habit, the start command tidies up after it.</walkthrough-footnote>
 
 ## Run your first program
 
