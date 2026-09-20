@@ -126,7 +126,7 @@ elif [ "$LAUNCH_DIR" != "$BASE" ]; then
   echo "  cd $BASE"
   echo "(Next time, run  source scripts/start.sh  and it will move you there itself.)"
 fi
-echo "Open this week's folder, for example:  cd m01"
+echo "Open an assignment folder, for example:  cd m01"
 
 # Tidy up the names this script used, since when sourced they would otherwise
 # stay in your shell.

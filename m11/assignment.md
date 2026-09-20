@@ -6,7 +6,7 @@ You will write a parser that pulls fields out of a pipe-delimited log dump, and 
 
 ## Scenario
 
-A Harborwatch client exported their gateway log to a pipe-delimited text dump and sent it over for review. Like every real export, it is dirty: somewhere in the batch a record lost a field, one has letters where the hour should be, one is padded with stray whitespace, and one line is simply blank. Your lead wants a field extractor that parses every record it can, rejects the ones it cannot (with a reason), and reports the hunt totals: how many parsed, how many rejected and why, and how many failed logins. In the real world this dump would arrive as a file; file reading comes in M14, so this week the records are handed to you as an in-code list and your whole job is the parsing.
+A Harborwatch client exported their gateway log to a pipe-delimited text dump and sent it over for review. Like every real export, it is dirty: somewhere in the batch a record lost a field, one has letters where the hour should be, one is padded with stray whitespace, and one line is simply blank. Your lead wants a field extractor that parses every record it can, rejects the ones it cannot (with a reason), and reports the hunt totals: how many parsed, how many rejected and why, and how many failed logins. In the real world this dump would arrive as a file; file reading comes in M14, so in this module the records are handed to you as an in-code list and your whole job is the parsing.
 
 ## What you are given
 
@@ -75,4 +75,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

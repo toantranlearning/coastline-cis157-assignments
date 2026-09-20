@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will complete a program that collects a suspicious-activity report from the keyboard and prints it back as a clean, standardized intake record. Everything in it is week-two Python: variables, `input()`, an `int()` cast, division, f-strings, and the `\n` and `\t` escape sequences. Every tool you build later in this course starts by turning messy typed input into tidy named variables, and this is where you drill that move.
+You will complete a program that collects a suspicious-activity report from the keyboard and prints it back as a clean, standardized intake record. Everything in it comes from this module: variables, `input()`, an `int()` cast, division, f-strings, and the `\n` and `\t` escape sequences. Every tool you build later in this course starts by turning messy typed input into tidy named variables, and this is where you drill that move.
 
 ## Scenario
 
@@ -68,4 +68,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

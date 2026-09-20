@@ -2,11 +2,11 @@
 
 ## What you are doing, and why
 
-You will turn three hunt utilities into a proper Python module (a `.py` file other programs use with `import` instead of copy-paste) and write a main program that imports it four different ways: the whole module with `import huntkit`, one name with `from huntkit import format_ioc`, and two standard-library modules, `math` and `platform`, that ship with Python. Along the way you will see what the `__name__` variable is for, why a module's self-test prints when you run the file but not when you import it, and what `dir()` reveals about any module you load. Every real Python program is mostly imports; this week you learn what is actually happening on those first few lines.
+You will turn three hunt utilities into a proper Python module (a `.py` file other programs use with `import` instead of copy-paste) and write a main program that imports it four different ways: the whole module with `import huntkit`, one name with `from huntkit import format_ioc`, and two standard-library modules, `math` and `platform`, that ship with Python. Along the way you will see what the `__name__` variable is for, why a module's self-test prints when you run the file but not when you import it, and what `dir()` reveals about any module you load. Every real Python program is mostly imports; in this module you learn what is actually happening on those first few lines.
 
 ## Scenario
 
-At **Harborwatch Security**, the utilities you built back in M06 (dwell-time math, severity labels, standardized IOC lines) have been a hit. Too much of a hit: every analyst has pasted their own copy into their own scripts, and the copies have started to drift. One analyst's `severity_label` says `GUARDED` where another's says `ELEVATED`, and last week two reports disagreed about the same incident. Your lead's fix is the standard one: the utilities move into a single shared module, `huntkit.py`, that every script imports and nobody copies. You will finish the module's last function, prove to yourself that importing it does not rerun its self-test, and write this week's hunt report as the module's first real customer.
+At **Harborwatch Security**, the utilities you built back in M06 (dwell-time math, severity labels, standardized IOC lines) have been a hit. Too much of a hit: every analyst has pasted their own copy into their own scripts, and the copies have started to drift. One analyst's `severity_label` says `GUARDED` where another's says `ELEVATED`, and last week two reports disagreed about the same incident. Your lead's fix is the standard one: the utilities move into a single shared module, `huntkit.py`, that every script imports and nobody copies. You will finish the module's last function, prove to yourself that importing it does not rerun its self-test, and write this module's hunt report as the module's first real customer.
 
 ## What you are given
 
@@ -15,7 +15,7 @@ At **Harborwatch Security**, the utilities you built back in M06 (dwell-time mat
 
 ## Instructions
 
-Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. This week the first two steps happen in the module file and the third in your main file, the same split every real Python project has.
+Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. In this module the first two steps happen in the module file and the third in your main file, the same split every real Python project has.
 
 1. Download both files **into the same folder**. Rename the starter file with your own name, all lowercase: `m09_jane_doe.py` for Jane Doe. Keep the `m09_` prefix, and do **not** rename `huntkit.py`, because `import huntkit` finds the module by its filename.
 2. **Read.** Part 1 is at the bottom of `huntkit.py`: press Run on that file directly and watch its self-test print in the Shell. It prints because Python sets the special variable `__name__` to `"__main__"` when a file is the program being run; the comment above the block tells the story. On this first run the severity line shows `None None None` and the IOC line has no `/100`. Both are Part 2's job.
@@ -73,4 +73,4 @@ Upload **two** `.py` files: no document, no screenshots, no `__pycache__` folder
 
 Before you upload, confirm three things: the main file is renamed with your own name while `huntkit.py` keeps its exact name, both files sit in the same folder and your main file runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

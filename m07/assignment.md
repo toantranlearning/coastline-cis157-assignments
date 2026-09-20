@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will build a threat-intel lookup tool: a dictionary maps each indicator to a **tuple** of details, one function looks an indicator up, another prints the whole table, and `try`/`except` handles the indicator that is not there. That last part carries the real lesson of the week: a miss in an intel table means *unknown*, not *safe*, and your program has to say so instead of crashing. Along the way you will read why the records are tuples: intel entries are evidence, and evidence should not be editable in place. You will add one new entry to the table yourself, because the table can grow even though its records cannot change.
+You will build a threat-intel lookup tool: a dictionary maps each indicator to a **tuple** of details, one function looks an indicator up, another prints the whole table, and `try`/`except` handles the indicator that is not there. That last part carries the real lesson of the module: a miss in an intel table means *unknown*, not *safe*, and your program has to say so instead of crashing. Along the way you will read why the records are tuples: intel entries are evidence, and evidence should not be editable in place. You will add one new entry to the table yourself, because the table can grow even though its records cannot change.
 
 ## Scenario
 
@@ -90,4 +90,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

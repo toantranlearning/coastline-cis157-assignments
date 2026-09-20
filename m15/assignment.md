@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will turn a jumble of timestamped events into the chronological timeline that anchors an incident report. Back in M02 you computed dwell time by subtracting one bare hour number from another, which only worked because that incident conveniently started and ended on the same day. Real incidents span days, and this week you solve the same problem with the real tools: parsing timestamp strings into `datetime` objects with `strptime`, sorting them, measuring gaps as `timedelta`s, formatting output with `strftime`, and using the `calendar` module for the report's month grid.
+You will turn a jumble of timestamped events into the chronological timeline that anchors an incident report. Back in M02 you computed dwell time by subtracting one bare hour number from another, which only worked because that incident conveniently started and ended on the same day. Real incidents span days, and in this module you solve the same problem with the real tools: parsing timestamp strings into `datetime` objects with `strptime`, sorting them, measuring gaps as `timedelta`s, formatting output with `strftime`, and using the `calendar` module for the report's month grid.
 
 ## Scenario
 
@@ -16,7 +16,7 @@ The hunt you ran in M14 for **Harborwatch Security** turned up six timestamped e
 
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own. This time the create step changes: every starter until now handed you the pseudocode, and from here the design step is yours, which is how the job works.
 
-Two functions do all the string work this week, and both speak the same little format-code language: `datetime.strptime(text, format)` reads a string in and returns a `datetime`; `some_datetime.strftime(format)` writes a string out. The codes you need:
+Two functions do all the string work in this module, and both speak the same little format-code language: `datetime.strptime(text, format)` reads a string in and returns a `datetime`; `some_datetime.strftime(format)` writes a string out. The codes you need:
 
 | Code | Meaning | Example |
 | --- | --- | --- |
@@ -92,4 +92,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm four things: the file is renamed with your own name, it runs without errors and matches the expected output, every header field contains your text rather than the placeholder text, and the Part 3 pseudocode comments are your own writing.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

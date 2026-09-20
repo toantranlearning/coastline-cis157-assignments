@@ -6,7 +6,7 @@ You will package code you have already written into **functions** (named, reusab
 
 ## Scenario
 
-Back at **Harborwatch Security**, your lead has been reading your last few hunts and noticed something: you have now written the dwell-time subtraction, the severity check, and the IOC formatting three different times, in three different files, with three slightly different sets of bugs. A hunter who copies code between hunts is a hunter who ships stale bugs: fix it in one place and the other two copies stay broken. This week the shop is standing up a shared toolkit: the repeated work becomes functions, written once, called everywhere. Your job is to stock the first four utilities and prove they work.
+Back at **Harborwatch Security**, your lead has been reading your last few hunts and noticed something: you have now written the dwell-time subtraction, the severity check, and the IOC formatting three different times, in three different files, with three slightly different sets of bugs. A hunter who copies code between hunts is a hunter who ships stale bugs: fix it in one place and the other two copies stay broken. Now the shop is standing up a shared toolkit: the repeated work becomes functions, written once, called everywhere. Your job is to stock the first four utilities and prove they work.
 
 ## What you are given
 
@@ -17,7 +17,7 @@ Back at **Harborwatch Security**, your lead has been reading your last few hunts
 Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m06_jane_doe.py` for Jane Doe. Keep the `m06_` prefix.
-2. **Read.** Part 1 is already complete: `dwell_time(start_hour, end_hour)` **returns** the hours elapsed (the hour detected minus the hour the compromise began), and the call below it stores that value before printing it. Run the program and find the dwell-time line in the Shell. Then try the two Shell experiments in the observation comments: what `print()` hands back (`None`, the value of any function with no `return`), and why `hours` raises a `NameError` outside the function (scope). Part 1 then shows a function that calls **itself**: `alerts_through(tier)` totals the alerts reviewed by a tier and every tier beneath it. Read its base case, the `if tier == 0` line that answers without calling again, and trace the chain on paper the way the observation comment describes, innermost call first. You are not asked to write recursion this week, but you are expected to read one and say what it prints.
+2. **Read.** Part 1 is already complete: `dwell_time(start_hour, end_hour)` **returns** the hours elapsed (the hour detected minus the hour the compromise began), and the call below it stores that value before printing it. Run the program and find the dwell-time line in the Shell. Then try the two Shell experiments in the observation comments: what `print()` hands back (`None`, the value of any function with no `return`), and why `hours` raises a `NameError` outside the function (scope). Part 1 then shows a function that calls **itself**: `alerts_through(tier)` totals the alerts reviewed by a tier and every tier beneath it. Read its base case, the `if tier == 0` line that answers without calling again, and trace the chain on paper the way the observation comment describes, innermost call first. You are not asked to write recursion in this module, but you are expected to read one and say what it prints.
 3. **Modify.** Part 2 gives you `alert_banner(text, width=40)`, whose second parameter has a **default value**, but the shop standard banner is 30 characters wide. Change the default from `40` to `30` and run again. The two calls already in the starter show both ways to call it: one leaves `width` at its default, the other overrides it with the **keyword argument** `width=20`.
 4. **Create.** Part 3 has no code yet: only pseudocode, in three numbered steps. Define `severity_label(score)`, which uses `if`/`elif`/`else` to **return** `"LOW"` for a score below 25, `"MEDIUM"` for 25-49, `"HIGH"` for 50-74, and `"CRITICAL"` for 75 and above. Return the label, do not print inside the function. Define `format_ioc(indicator, kind, confidence)`, which **returns** one record string built with an f-string, in exactly this shape: `[IP] 203.0.113.7 (confidence 85%)`. Then write the short main section that calls both functions and prints the results.
 5. Run the program one last time and check that every line matches the expected output below, in order.
@@ -43,7 +43,7 @@ You must be able to explain every line you submit, on request. Undisclosed AI us
 
 ## Expected output
 
-There are no input prompts this week: the program computes the same report every run, so your output must match this exactly, line for line.
+There are no input prompts in this assignment: the program computes the same report every run, so your output must match this exactly, line for line.
 
 ```text
 Dwell time, Meridian Freight: 14 hours
@@ -68,4 +68,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

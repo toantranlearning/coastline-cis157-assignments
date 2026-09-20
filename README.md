@@ -51,7 +51,7 @@ Two assignments need a second file, and both are already in their folder:
 
 If you used the Set up button above, the course content is already there and you can skip this section. Otherwise, you do not need Git or a GitHub account for this course. Either way works:
 
-**The simple way.** Open the folder for this week's assignment, open the starter file, and use the **Download raw file** button. Do the same for `huntkit.py` or `server.log` if the folder has one.
+**The simple way.** Open the folder for this module's assignment, open the starter file, and use the **Download raw file** button. Do the same for `huntkit.py` or `server.log` if the folder has one.
 
 **The Git way**, if you already know it or want to learn:
 
@@ -66,9 +66,9 @@ Then pull before each new assignment, in case I have corrected something:
 git pull
 ```
 
-## The workflow, every week
+## The workflow, every module
 
-1. Get the starter file for the week.
+1. Get the starter file for the module.
 2. **Rename it with your own name, all lowercase**, keeping the prefix. Jane Doe turns `m01_firstname_lastname.py` into `m01_jane_doe.py`.
 3. Complete the numbered requirements in your editor. Every assignment has three parts: read working code, modify working code, then write your own from the pseudocode in the file.
 4. Run it and check your output against the **Expected output** section of that folder's `assignment.md`.
@@ -83,4 +83,4 @@ Generative AI is welcome as a tutor. Ask it to explain a concept or tell you wha
 
 ## If you get stuck
 
-Post in the week's discussion in Canvas. Share **no more than three lines** of your code there, so your post is a question rather than a solution. For anything specific to you or your grade, message me in the Canvas Inbox.
+Post in the module's discussion in Canvas. Share **no more than three lines** of your code there, so your post is a question rather than a solution. For anything specific to you or your grade, message me in the Canvas Inbox.

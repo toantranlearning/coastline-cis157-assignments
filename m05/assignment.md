@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will sort a list of alert severity scores with a **bubble sort you write yourself**: nested loops, comparing neighbors, swapping them when they are out of order. Python has `sorted()` and `.sort()`, and after this week you will use them; this week they are prohibited, because the point is to see what sorting *is* before you let the language do it for you. Along the way you will grow a list with `append()`, scan it with a loop to find its extremes, and walk it backward. These are the core list skills this module is about.
+You will sort a list of alert severity scores with a **bubble sort you write yourself**: nested loops, comparing neighbors, swapping them when they are out of order. Python has `sorted()` and `.sort()`, and after this module you will use them; in this module they are prohibited, because the point is to see what sorting *is* before you let the language do it for you. Along the way you will grow a list with `append()`, scan it with a loop to find its extremes, and walk it backward. These are the core list skills this module is about.
 
 ## Scenario
 
@@ -78,4 +78,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

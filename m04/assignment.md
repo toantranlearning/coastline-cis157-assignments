@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will write a monitoring program that watches a stream of login results and sounds the alarm when it sees a brute-force pattern. This is the week the course's two loop forms meet real state: a `while` loop that runs until a sentinel value ends the stream, a `for` loop with `range()` for a fixed count, and booleans with `if/elif/else` deciding what each new piece of input means for the counters you are tracking. The consecutive-failure counter at the heart of this program (reset on success, increment on failure, act at a threshold) is the same pattern behind account lockouts, rate limiters, and intrusion detection everywhere.
+You will write a monitoring program that watches a stream of login results and sounds the alarm when it sees a brute-force pattern. This is the module where the course's two loop forms meet real state: a `while` loop that runs until a sentinel value ends the stream, a `for` loop with `range()` for a fixed count, and booleans with `if/elif/else` deciding what each new piece of input means for the counters you are tracking. The consecutive-failure counter at the heart of this program (reset on success, increment on failure, act at a threshold) is the same pattern behind account lockouts, rate limiters, and intrusion detection everywhere.
 
 ## Scenario
 
@@ -79,4 +79,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

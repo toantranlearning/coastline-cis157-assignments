@@ -6,7 +6,7 @@ You will write a program that computes the numbers in an incident report and pri
 
 ## Scenario
 
-Back at **Harborwatch Security**, your lead has real work for you this week. The first number in every hunt report the shop sends out is **dwell time**: how long an attacker sat inside a client's network before anyone noticed. Analysts have been working it out by hand for the Meridian Freight case, along with a triage rate and a risk score, and typing the results into the report. Your lead wants that arithmetic written down once, as a program that prints the report block the same way every time.
+Back at **Harborwatch Security**, your lead has real work for you. The first number in every hunt report the shop sends out is **dwell time**: how long an attacker sat inside a client's network before anyone noticed. Analysts have been working it out by hand for the Meridian Freight case, along with a triage rate and a risk score, and typing the results into the report. Your lead wants that arithmetic written down once, as a program that prints the report block the same way every time.
 
 ## What you are given
 
@@ -82,4 +82,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and matches the expected output, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

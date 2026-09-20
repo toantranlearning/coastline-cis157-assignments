@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will build a complete console game (a battleship-style hunt on a 3x3 grid) using everything from the first half of this course working together in one program: nested lists for the grid, functions to organize the work, a `while` loop to run the game, conditionals to validate input and resolve each move, booleans to track the outcome, and f-strings to report status. Every weekly assignment so far exercised one or two of these at a time; the midterm is where they have to cooperate. This project is worth **60 points**, roughly double a weekly assignment, and the page below is proportionally fuller: read all of it before you write a line of code.
+You will build a complete console game (a battleship-style hunt on a 3x3 grid) using everything from the first half of this course working together in one program: nested lists for the grid, functions to organize the work, a `while` loop to run the game, conditionals to validate input and resolve each move, booleans to track the outcome, and f-strings to report status. Every module assignment so far exercised one or two of these at a time; the midterm is where they have to cooperate. This project is worth **60 points**, roughly double a module assignment, and the page below is proportionally fuller: read all of it before you write a line of code.
 
 ## Scenario
 
@@ -129,4 +129,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and plays a complete game (win and lose) in the format shown above, and every header field contains your text, not the placeholder text.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

@@ -43,7 +43,7 @@ print("Client:\tMeridian Freight")
 print("Analyst:\tJ. Okafor")
 
 # ---- Part 3: CREATE ---------------------------------------------------
-# No code yet, only pseudocode. This week's incident is already decided:
+# No code yet, only pseudocode. This module's incident is already decided:
 # the compromise began at hour 3, it was detected at hour 53, 24 alerts
 # were raised, and 18 of them were triaged. You are not asking anyone for
 # those numbers; you are writing the arithmetic that turns them into a

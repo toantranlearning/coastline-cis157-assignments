@@ -2,7 +2,7 @@
 
 ## What you are doing, and why
 
-You will build the role-based access control layer for Harborwatch's own SOC platform. The parent class that defines what every user can do, and the custom exception that fires when someone asks for a tool their role does not grant, are given to you complete; your job is to read them, make one change to them, and then build the three role classes that extend them. Role hierarchies map to class inheritance because that is literally what inheritance models: shared capability with specialized extension. Every user can view the dashboard; a senior analyst can do that plus close tickets and export reports; an admin can do all of that plus manage users. This is the densest weekly assignment in the course (inheritance, `super()`, method overriding, `__str__`, custom exceptions, `raise`, and the full `try`/`except`/`else`/`finally` shape all land in one program), and that is intentional: they are one system, and access control is where they meet.
+You will build the role-based access control layer for Harborwatch's own SOC platform. The parent class that defines what every user can do, and the custom exception that fires when someone asks for a tool their role does not grant, are given to you complete; your job is to read them, make one change to them, and then build the three role classes that extend them. Role hierarchies map to class inheritance because that is literally what inheritance models: shared capability with specialized extension. Every user can view the dashboard; a senior analyst can do that plus close tickets and export reports; an admin can do all of that plus manage users. This is the densest module assignment in the course (inheritance, `super()`, method overriding, `__str__`, custom exceptions, `raise`, and the full `try`/`except`/`else`/`finally` shape all land in one program), and that is intentional: they are one system, and access control is where they meet.
 
 ## Scenario
 
@@ -81,4 +81,4 @@ Upload **one** `.py` file: no document, no screenshots. It is the starter you do
 
 Before you upload, confirm four things: the file is renamed with your own name, it runs without errors and matches the expected output, every header field contains your text rather than the placeholder text, and step 3f's pseudocode comments are your own writing.
 
-If you get stuck, post a question in the weekly discussion, but share no more than three lines of your code there, so your post is a question and not a solution.
+If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

@@ -128,11 +128,11 @@ Two things worth knowing about this machine:
 
 You can run a program, edit it, rename it, and download it to hand in. That is the whole workflow, and it is the same for all fifteen assignments.
 
-Each week, `cd` into that assignment's folder, read its `assignment.md`, and check your output against the **Expected output** section before you submit. To get back to the top from inside a folder, run `cd ..`.
+For each module, `cd` into that assignment's folder, read its `assignment.md`, and check your output against the **Expected output** section before you submit. To get back to the top from inside a folder, run `cd ..`.
 
 One rule, and it does not change: **you write every line you submit, and you must be able to explain any line I ask about.** AI is welcome as a tutor to explain a concept or an error message. It does not write your code. The start command switches the editor's AI suggestions off for you, so you are not fighting a tool that wants to finish your sentences while you are learning to write them.
 
-If you get stuck, post in the week's discussion in Canvas, sharing no more than three lines of code, or message me in the Canvas Inbox.
+If you get stuck, post in the module's discussion in Canvas, sharing no more than three lines of code, or message me in the Canvas Inbox.
 
 <walkthrough-footnote>To bring this panel back any time, run `teachme TUTORIAL.md` in the terminal.</walkthrough-footnote>
 
