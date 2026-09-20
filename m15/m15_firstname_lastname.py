@@ -14,6 +14,7 @@ Also briefly explain the difference between %m and %M in a format string.]
 '''
 
 import calendar
+import os
 from datetime import datetime
 
 # Given: the six events recovered by the M14 hunt, in the order they were
@@ -92,5 +93,23 @@ print("Timeline style:", first_moment.strftime("%b %d, %H:%M"))
 #    calendar.month() for the earliest event's .year and .month, then the
 #    caption: Compromise began this month, on <earliest moment formatted
 #    with "%a %b %d">.
+# YOUR PSEUDOCODE:
+# TODO: your code here
+
+# 7. File the report. In order:
+#    - Make a folder named case_files with os.mkdir(). If it is already
+#      there from an earlier run, carry on: catch FileExistsError.
+#    - Write two lines to the file case_files/draft.txt:
+#          Incident timeline: <number of events> events
+#          the same Dwell time line you printed in step 4
+#    - Build the final name: timeline_<earliest moment formatted with
+#      "%Y-%m-%d">.txt
+#    - If os.listdir("case_files") already holds a file with the final
+#      name, delete it with os.remove(), so that os.rename() does the
+#      same thing on every computer and on every run.
+#    - Rename draft.txt to the final name with os.rename().
+#    - Print a blank line, then:
+#          Report filed: case_files/<final name>
+#          Files in case_files: <the sorted os.listdir of the folder>
 # YOUR PSEUDOCODE:
 # TODO: your code here

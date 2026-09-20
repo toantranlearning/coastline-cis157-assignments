@@ -31,9 +31,9 @@ for score in severities:
 severities.append(0.5)
 
 # ---- Part 3: CREATE ---------------------------------------------------
-# No code yet -- only pseudocode. Turn each step into Python, in order.
+# No code yet, only pseudocode. Turn each step into Python, in order.
 # Do NOT use sorted(), .sort(), max(), or min() anywhere in this part;
-# writing the loops yourself is the point of this assignment.
+# writing the loops yourself is the requirement.
 
 # 3a. Print the full list BEFORE sorting, on one line.
 #
@@ -80,7 +80,7 @@ severities.append(0.5)
 #
 # TODO: your code here
 
-# 3e. Print the triage order WORST-FIRST -- walk the sorted list in
+# 3e. Print the triage order WORST-FIRST: walk the sorted list in
 #     reverse, one score per line with its priority number.
 #
 # Pseudocode:

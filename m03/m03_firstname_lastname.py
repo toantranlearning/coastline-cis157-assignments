@@ -10,12 +10,13 @@ DESCRIPTION:
 REFLECTION:
 [2-3 sentences: what you built, the error or unexpected behavior you
 hit along the way, why you think it happened, and what fixed it.
-Also briefly explain what print() does.]
+Also briefly explain why the confidence score is cast with int()
+before it is divided.]
 '''
 
 # ---- Part 1: READ -----------------------------------------------------
-# The two lines below are already complete. Run the program (green Run
-# button, or F5), type your name at the prompt, and watch the f-string
+# The two lines below are already complete. Run the program, type your
+# name at the prompt, and watch the f-string
 # echo it back. input() always hands you a string; the f-string drops it
 # into the middle of another string.
 analyst = input("Analyst name: ")
@@ -38,8 +39,8 @@ print("=== HARBORWATCH IOC " + "TRIAGE ===")
 #   PROMPT "Confidence score (0-100): ", cast the reply with int(), SET it in a variable
 #   SET a new variable to the confidence score divided by 100 (85 becomes 0.85)
 #   PRINT one multi-line f-string using \n and \t: a blank line, the text
-#     [IOC RECORD], then one tab-indented line per value -- Analyst,
-#     Indicator, Type, Source, and Confidence as <score>/100 (<fraction>) --
+#     [IOC RECORD], then one tab-indented line per value: Analyst,
+#     Indicator, Type, Source, and Confidence as <score>/100 (<fraction>),
 #     matching the layout in the assignment's expected output
 #
 # TODO: write your code below this comment

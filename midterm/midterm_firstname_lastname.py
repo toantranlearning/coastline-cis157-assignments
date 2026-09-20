@@ -20,7 +20,7 @@ Also briefly explain why the case-number trick is not truly random.]
 # function draw a mid-game sample board so you can see every symbol on
 # the grid: "." is an unprobed host, "o" is a host probed and found
 # clean, "X" is the intruder found. The finished game calls this
-# function as-is -- you will not change it.
+# function as-is. You will not change it.
 
 def display_board(board):
     print("    0   1   2")
@@ -30,7 +30,7 @@ def display_board(board):
         print(f"{row_number} | {row[0]} | {row[1]} | {row[2]} |")
         print("  +---+---+---+")
 
-# Demo lines: delete BOTH of these in step 3.1 -- the finished game
+# Demo lines: delete BOTH of these in step 3.1. The finished game
 # builds its own board and must not print this sample grid.
 sample_board = [["o", ".", "."], [".", "o", "."], [".", ".", "X"]]
 display_board(sample_board)
@@ -39,7 +39,7 @@ display_board(sample_board)
 # The banner below is complete, but the probe budget is last year's:
 # this year's exercise gives the analyst 4 probes, not 5. Change PROBES
 # from 5 to 4, run again, and confirm the banner reports 4 probes.
-# Change only the constant -- the banner's f-string and the rest of the
+# Change only the constant. The banner's f-string and the rest of the
 # game read PROBES, so the whole program follows.
 
 PROBES = 5
@@ -49,7 +49,7 @@ print(f"You have {PROBES} probes to find them. Good hunting.")
 
 # ---- Part 3: CREATE ---------------------------------------------------
 # The rest of the game is yours, in seven steps. Each step's pseudocode
-# is complete -- translate it line by line rather than inventing your
+# is complete. Translate it line by line rather than inventing your
 # own structure. Build one step, run the program, and only then move on
 # to the next.
 
@@ -58,7 +58,7 @@ print(f"You have {PROBES} probes to find them. Good hunting.")
 #     itself stays.
 
 # 3.2 The input-validation function, used for both the row and the
-#     column. Invalid input never costs a probe -- the function simply
+#     column. Invalid input never costs a probe. The function
 #     explains the problem and asks again.
 #
 # Pseudocode:
@@ -90,8 +90,8 @@ print(f"You have {PROBES} probes to find them. Good hunting.")
 # TODO: your code here
 
 # 3.4 The opening: ask for the client case number and derive the
-#     intruder's position from it. (The pre-random trick -- see the
-#     assignment page for the honest explanation. Retired in M09.)
+#     intruder's position from it. (This stands in for the random module, which
+#     M09 teaches. The assignment page explains it.)
 #
 # Pseudocode:
 #   PRINT a blank line
@@ -117,7 +117,7 @@ print(f"You have {PROBES} probes to find them. Good hunting.")
 #   SET found to False
 # TODO: your code here
 
-# 3.6 The main game loop -- one full turn per pass.
+# 3.6 The main game loop: one full turn per pass.
 #
 # Pseudocode:
 #   LOOP while probes_left is greater than 0 AND found is False

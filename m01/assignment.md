@@ -2,11 +2,11 @@
 
 ## What you are doing, and why
 
-You will write and run your first Python program. The program itself is two lines; the point is everything around it: proving that your Python setup works, that you can get a program from your keyboard to the screen, and that you can follow the workflow every assignment in this course uses: download the starter, complete the numbered requirements, verify your output, and sign your work in the header. Get this loop working now, while the code is trivial, and the rest of the course is about the code.
+You will write and run your first Python program. It uses `print()` to show three lines of text: one line is already written, you change one, and you write one yourself. Running it shows that your Python setup works. You also practice the steps every assignment in this course uses: download the starter, complete the numbered requirements, check your output against the expected output, and fill in the header.
 
 ## Scenario
 
-Welcome to your first day at **Harborwatch Security**, a small managed security services provider where you have just started as a junior SOC analyst. You will spend this course building the tools a small security shop actually runs on: access checks, password utilities, vulnerability lookups, log analysis. Day one is the same at every shop: before anyone hands you real work, your lead wants proof that your development environment runs code and that you sign what you build. That is this assignment.
+You have started as a junior SOC analyst at **Harborwatch Security**, a small managed security services provider. The assignments in this course are tools for that shop, such as access checks, password utilities, vulnerability lookups, and log analysis. On your first day, your lead asks you to show that your development environment runs code and that you put your name on what you build.
 
 ## What you are given
 
@@ -14,14 +14,14 @@ Welcome to your first day at **Harborwatch Security**, a small managed security 
 
 ## Instructions
 
-Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
+Work in three steps: **read** the working code, **modify** it, then **create** your own from the pseudocode in the starter.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m01_jane_doe.py` for Jane Doe. Keep the `m01_` prefix.
-2. **Read.** Open the file and run it. Part 1 is already complete. You should see `Hello, World!` in the output. If you do, your Python environment works; that was half the assignment.
+2. **Read.** Part 1 is already complete. Open the file and run it. You should see `Hello, World!` in the output. If you do, your Python environment works.
 3. **Modify.** Part 2 prints the team banner with the wrong shift name. Change `night shift` to `day shift` and run again.
-4. **Create.** Part 3 has no code yet, only pseudocode. Follow it line by line to print a greeting that includes a name. `Hello, Alice! Welcome to the world of Python!` is the pattern; any name works.
-5. Run the program one last time and check that all three lines print, in order, and match the expected output below.
-6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. Every program you submit in this course carries this header; professionals sign their work, and so do you.
+4. **Create.** Part 3 has no code yet, only pseudocode. Follow it line by line to print a greeting that includes a name. Use this pattern: `Hello, Alice! Welcome to the world of Python!` You may use any name in place of Alice.
+5. Run the program one last time. Check that all three lines print, in order, and match the expected output below.
+6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. Every program you submit in this course has this header. The reflection prompt in the starter also asks you to explain what print() does.
 
 Open notes and open book are both fine. Respond in your own words; do not copy from other sources.
 
@@ -43,7 +43,7 @@ You must be able to explain every line you submit, on request. Undisclosed AI us
 
 ## Expected output
 
-Your greeting's name may differ; the three lines and their order must not.
+The name in your greeting may be different. The three lines and their order must match.
 
 ```text
 Hello, World!

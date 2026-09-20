@@ -1,5 +1,5 @@
 '''
-huntkit.py -- Harborwatch Security's shared hunt utilities.
+huntkit.py: Harborwatch Security's shared hunt utilities.
 
 This is a module: a .py file whose functions other programs use by
 importing it, not by copy-pasting it. Any script saved in the same
@@ -8,10 +8,10 @@ folder gets everything here with one line:
     import huntkit
 
 Parts 1 and 2 of this assignment happen in this file. Part 1 is the
-self-test block at the very bottom -- run this file directly and read
-what happens. Part 2 is the section marked MODIFY in the middle. Part 3
--- the main program that imports this module -- lives in the starter
-file, not here.
+self-test block at the very bottom: run this file directly and read
+what happens. Part 2 is the section marked MODIFY in the middle. Part 3,
+the main program that imports this module, lives in the starter file,
+not here.
 '''
 
 
@@ -23,13 +23,13 @@ def dwell_time(start, end):
 
 
 # ---- Part 2: MODIFY ---------------------------------------------------
-# Two jobs, both in this section -- but do Part 1 (bottom of this file)
+# Two jobs, both in this section, but do Part 1 (bottom of this file)
 # first. Job one: severity_label() below has no code yet, only
 # pseudocode. Turn it into code, line by line. Job two: format_ioc()
 # works, but it still writes the old line style, ending in
-# "confidence=85" -- the SOC standard now shows the scale,
+# "confidence=85". The SOC standard now shows the scale,
 # "confidence=85/100". Add /100 to the end of its f-string. Then run
-# this file directly again and check the Shell against the first
+# this file directly again and check the output against the first
 # expected output block on the assignment page.
 def severity_label(score):
     '''Return the label for a severity score (0-100):
@@ -52,11 +52,10 @@ def format_ioc(indicator, kind, confidence):
 
 # ---- Part 1: READ -----------------------------------------------------
 # This block is the module's self-test, and it is already complete.
-# Before changing anything, press Run on THIS file (green Run button,
-# or F5) and watch the Shell pane: the block prints, because Python
-# sets the special variable __name__ to "__main__" when a file is the
-# program being run. When another file imports huntkit instead,
-# __name__ is "huntkit", the if is False, and the block is skipped --
+# Before changing anything, run THIS file and watch the output: the
+# block prints, because Python sets the special variable __name__ to
+# "__main__" when a file is the program being run. When another file imports huntkit instead,
+# __name__ is "huntkit", the if is False, and the block is skipped, so
 # the importer gets the functions without the test prints. On this
 # first run the severity line shows None None None and the IOC line
 # has no /100; both are Part 2's job.

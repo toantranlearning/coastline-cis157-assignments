@@ -118,9 +118,9 @@ print(f"Alert threshold: {SPEED_LIMIT_KMH} km/h")
 #   PRINT: Sign-in log:
 #   LOOP over each event in sign_in_log
 #       PRINT that event's summary()
-#   (A list can hold objects just as easily as it holds numbers. Looping
-#    over a collection of objects and calling the same method on each is
-#    how real programs handle a hundred events instead of four.)
+#   (A list can hold objects the same way it holds numbers. Looping over
+#    a list of objects and calling the same method on each one works for
+#    a hundred events the same way it works for four.)
 # TODO: your code here
 
 # 6. The travel check (one pair per user), then the fleet stats, read
@@ -130,13 +130,18 @@ print(f"Alert threshold: {SPEED_LIMIT_KMH} km/h")
 #   PRINT a blank line
 #   PRINT: Travel check:
 #   IF event_a1.is_impossible_travel(event_a2)
-#       COMPUTE speed AS distance_km(event_a1.coords, event_a2.coords)
-#           DIVIDED BY (event_a2.hour MINUS event_a1.hour)
-#       PRINT the alert: IMPOSSIBLE TRAVEL: <username> -- <city> (hour <hour>)
-#           -> <city> (hour <hour>) implies <speed> km/h
-#       (format the speed with :.0f, like the distance in Part 1)
+#       COMPUTE hours AS event_a2.hour MINUS event_a1.hour
+#       IF hours IS 0 (there is no speed to compute: dividing by 0 is an error)
+#           PRINT the alert: IMPOSSIBLE TRAVEL: <username> -- <city> (hour <hour>)
+#               -> <city> (hour <hour>) in the same hour
+#       ELSE
+#           COMPUTE speed AS distance_km(event_a1.coords, event_a2.coords)
+#               DIVIDED BY hours
+#           PRINT the alert: IMPOSSIBLE TRAVEL: <username> -- <city> (hour <hour>)
+#               -> <city> (hour <hour>) implies <speed> km/h
+#           (format the speed with :.0f, like the distance in Part 1)
 #   IF event_b1.is_impossible_travel(event_b2)
-#       COMPUTE speed the same way AND PRINT the same shape of alert
+#       DO the same for this pair: the same-hour check, then the same alert
 #   PRINT a blank line
 #   PRINT: Fleet stats (from the class):
 #   PRINT: Total sign-ins: SignInEvent.total_signins

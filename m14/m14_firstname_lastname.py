@@ -19,7 +19,7 @@ too large to fit in memory.]
 # statement, reads it LINE BY LINE (`for line in log_file`, never
 # read() or readlines()), and counts the lines. Line-by-line reading
 # holds one line in memory at a time, so this exact loop works on a
-# million-line log. Run the program and check the count in the Shell.
+# million-line log. Run the program and check the count in the output.
 line_count = 0
 with open("server.log", "r") as log_file:
     for line in log_file:
@@ -29,7 +29,7 @@ print("Lines in log:", line_count)
 # ---- Part 2: MODIFY ---------------------------------------------------
 # The demo below counts every line containing PATTERN. Right now it
 # hunts for "ERROR". Change PATTERN to "WARNING", run again, and watch
-# the count change: one constant redirects the whole hunt.
+# the count change: one constant decides what this loop counts.
 PATTERN = "ERROR"
 pattern_count = 0
 with open("server.log", "r") as log_file:

@@ -14,8 +14,8 @@ Also briefly explain what print() does.]
 '''
 
 # ---- Part 1: READ -----------------------------------------------------
-# The line below is already complete. Run the program (green Run button,
-# or F5) and look at the Shell pane. What did it print?
+# The line below is already complete. Run the program and look at the
+# output. What did it print?
 print("Hello, World!")
 
 # ---- Part 2: MODIFY ---------------------------------------------------

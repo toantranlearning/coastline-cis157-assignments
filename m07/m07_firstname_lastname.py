@@ -27,8 +27,8 @@ INTEL = {
 }
 
 # The two lines below are already complete. Run the program and look at
-# the Shell pane. Square brackets with a key pull that key's value out of
-# the dictionary -- the whole record prints, parentheses and all, because
+# the output. Square brackets with a key pull that key's value out of
+# the dictionary. The whole record prints, parentheses and all, because
 # the record is a tuple.
 record = INTEL["d41d8cd98f00"]
 print("d41d8cd98f00 ->", record)
@@ -37,20 +37,20 @@ print("d41d8cd98f00 ->", record)
 threat, confidence, status = record
 print("Threat:", threat, "| Confidence:", confidence, "| Status:", status)
 
-# One thing to notice -- no code needed. The records are tuples on purpose:
+# One thing to notice (no code needed). The records are tuples on purpose:
 # intel entries are evidence, and evidence should not be editable in place.
 # If you tried  record[0] = "something else"  Python would stop you with a
 # TypeError. That is why the values above sit in parentheses, not brackets.
 
 # ---- Part 2: MODIFY ---------------------------------------------------
 # The team has just confirmed a new indicator, and it belongs in the table.
-# Adding an entry is one dictionary item assignment -- the same square
+# Adding an entry is one dictionary item assignment: the same square
 # brackets as a lookup, but on the left side of an equals sign:
 #
 #     INTEL["<indicator>"] = ("<threat_name>", "<confidence>", "<status>")
 #
 # The new record: indicator 198.51.100.23, threat name Qakbot loader,
-# confidence High, status Active. Run the program again -- nothing new
+# confidence High, status Active. Run the program again. Nothing new
 # prints yet, but once Part 3 works this entry appears at the end of the
 # full table.
 # TODO: write your one line of code below this comment

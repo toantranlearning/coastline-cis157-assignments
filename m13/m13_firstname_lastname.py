@@ -60,14 +60,16 @@ print("Permissions:", guest.get_permissions())
 print(guest.request_tool("view_dashboard"))  # allowed: returns a message
 
 # The line below asks for a tool Avery does NOT have. Remove the # at the
-# start of the print line, run once, and read the traceback in the Shell:
+# start of the print line, run once, and read the traceback in the output:
 # the program stops with AccessDeniedError, carrying the message built in
 # request_tool(). That crash-with-a-name is what "raise" does. Then put
 # the # back so the rest of the program can run.
 # print(guest.request_tool("manage_users"))
 
 # ---- Part 2: MODIFY ---------------------------------------------------
-# Every user should also see the alert feed, not just the dashboard.
+# An account with no role of its own should see the alert feed as well as
+# the dashboard. (The three role classes you write in Part 3 override
+# get_permissions() with their own lists, so this change does not reach them.)
 # In get_permissions() above, change the default list
 #     ["view_dashboard"]
 # to

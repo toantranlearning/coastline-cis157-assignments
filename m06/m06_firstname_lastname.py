@@ -15,7 +15,7 @@ Also briefly explain the difference between print() and return.]
 
 # ---- Part 1: READ -----------------------------------------------------
 # The function below is already complete. Run the program and find its
-# line in the Shell pane. Notice the shape: def names the function and
+# line in the output. Notice the shape: def names the function and
 # its parameters, return hands a value back, and the call below stores
 # that value in a variable before printing it.
 
@@ -28,12 +28,13 @@ print(f"Dwell time, Meridian Freight: {elapsed} hours")
 
 # Observe (nothing to change here):
 # - dwell_time RETURNS a number; that is why we could store it in elapsed.
-# - print() returns nothing. Try in the Shell: x = print("hi") and then
-#   print(x) -- you get None, the value a function hands back when it has
+# - print() returns nothing. Try these two lines: x = print("hi") and then
+#   print(x). You get None, the value a function hands back when it has
 #   no return statement.
 # - The variable hours exists only while the function runs. Try
-#   print(hours) in the Shell after running: the NameError means hours is
+#   print(hours) outside the function: the NameError means hours is
 #   out of scope out here.
+# (The setup page for your editor says how to try one line after a run.)
 
 # A function can also call ITSELF. This one totals the alerts reviewed by
 # a tier and every tier beneath it. Run it and read the trace below.
@@ -59,8 +60,8 @@ print(f"Alerts reviewed through tier 3: {alerts_through(3)}")
 # shop standard banner is 30 characters wide, not 40. Change the default
 # value 40 to 30, then run again and watch the first banner shrink.
 # The first call below leaves width at its default; the second overrides
-# it with a keyword argument. That is the whole point of a default: most
-# callers pass nothing, and the odd one out names what it changes.
+# it with a keyword argument. Most calls leave a default alone, and a call
+# that needs something different names the parameter it changes.
 
 def alert_banner(text, width=40):
     rule = "=" * width
@@ -70,7 +71,7 @@ print(alert_banner("HARBORWATCH HUNT UTILITIES"))
 print(alert_banner("SHIFT CHANGE", width=20))
 
 # ---- Part 3: CREATE ---------------------------------------------------
-# No code yet -- only pseudocode. Follow it line by line.
+# No code yet, only pseudocode. Follow it line by line.
 
 # 1. Define severity_label(score): return the label for a score.
 #

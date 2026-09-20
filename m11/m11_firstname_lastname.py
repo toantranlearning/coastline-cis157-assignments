@@ -33,9 +33,8 @@ records = [
 # ---- Part 1: READ -----------------------------------------------------
 # The code below is already complete. It takes ONE clean record from the
 # list, splits it on "|", and prints each field. Run the program and match
-# each printed field back to the record it came from. This is the whole
-# parsing move. Part 3 just repeats it in a loop, on records that fight
-# back.
+# each printed field back to the record it came from. Part 3 does
+# the same thing in a loop, on records that are not all clean.
 sample = records[0]
 fields = sample.split("|")
 print("record:", sample)
@@ -50,7 +49,7 @@ print("status:", fields[3])
 # records[2], the whitespace-padded record, and run again. Notice what
 # .strip() removed (the outer spaces) and what it did not (the spaces
 # around the inner fields). That is why Part 3 strips every field, not
-# just the record.
+# only the record.
 print("cleaned:", records[0].strip())
 
 # ---- Part 3: CREATE ---------------------------------------------------

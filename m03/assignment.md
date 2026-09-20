@@ -2,11 +2,11 @@
 
 ## What you are doing, and why
 
-You will complete a program that collects a suspicious-activity report from the keyboard and prints it back as a clean, standardized intake record. Everything in it comes from this module: variables, `input()`, an `int()` cast, division, f-strings, and the `\n` and `\t` escape sequences. Every tool you build later in this course starts by turning messy typed input into tidy named variables, and this is where you drill that move.
+You will complete a program that asks for the details of a suspicious-activity report at the keyboard and prints them back as one intake record. The assignment practices what this module teaches: variables, `input()`, an `int()` cast, division, f-strings, and the `\n` and `\t` escape sequences.
 
 ## Scenario
 
-At **Harborwatch Security**, hunts start with a phone call. A client notices something off (a strange IP hammering their firewall, a file hash their antivirus flagged) and phones it in. Whoever picks up writes down an indicator of compromise (IOC), and every analyst who works the case afterward works from that record. If the intake is sloppy, the hunt starts from garbage. Your lead wants intake off of sticky notes: a small program that prompts the analyst for the details of the report, scores how confident the caller sounded, and prints one standardized record, the same shape every time.
+At **Harborwatch Security**, a client who sees something suspicious, such as a strange IP address hitting their firewall or a file hash their antivirus flagged, reports it by phone. The analyst who takes the call writes down an indicator of compromise (IOC), and every analyst who works the case later starts from that record. Your lead wants a small program to replace handwritten notes. It prompts the analyst for the details of the report, takes a score for how confident the caller sounded, and prints one record in the same layout every time.
 
 ## What you are given
 
@@ -14,14 +14,18 @@ At **Harborwatch Security**, hunts start with a phone call. A client notices som
 
 ## Instructions
 
-Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
+Work in three steps: **read** the working code, **modify** it, then **create** your own from the pseudocode in the starter.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m03_jane_doe.py` for Jane Doe. Keep the `m03_` prefix.
-2. **Read.** Part 1 is already complete: it prompts for the analyst's name with `input()` and echoes it back inside an f-string. Run the program, type your name, and confirm you see the `Intake started by` line.
-3. **Modify.** Part 2 builds the intake banner from two pieces with string concatenation (`+`), but the last word is wrong. Change `TRIAGE` to `INTAKE` and run again.
-4. **Create.** Part 3 has no code yet: only pseudocode, one line of code per step. Follow it to prompt for the remaining fields (the indicator value, indicator type, and source; then the confidence score cast with `int()`), compute the confidence as a fraction of 100 with division, and print the record as one multi-line f-string using the `\n` and `\t` escape sequences.
+2. **Read.** Part 1 is already complete. It prompts for the analyst's name with `input()` and echoes the name back inside an f-string. Run the program, type your name, and confirm you see the `Intake started by` line.
+3. **Modify.** Part 2 builds the intake banner from two pieces with string concatenation (`+`). The last word of the banner is wrong. Change `TRIAGE` to `INTAKE` and run again.
+4. **Create.** Part 3 has no code yet, only pseudocode. Each pseudocode step becomes one line of code.
+   - Prompt for the remaining text fields, in this order: the indicator value, the indicator type, and the source of the report. Store each reply in its own variable.
+   - Prompt for the confidence score and cast the reply with `int()`. `input()` always gives you a string, and you cannot divide a string.
+   - Compute the confidence as a fraction of 100 with division, and store the result in a new variable.
+   - Print the record as one multi-line f-string. Use the `\n` escape sequence to start each new line and the `\t` escape sequence to indent the lines under the record heading.
 5. Run the program, type in a test report, and check that your record matches the expected output below.
-6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. Every program you submit in this course carries this header; professionals sign their work, and so do you.
+6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. The reflection prompt in the starter also asks you to explain why the confidence score is cast with int() before it is divided.
 
 Open notes and open book are both fine. Respond in your own words; do not copy from other sources.
 
@@ -43,7 +47,7 @@ You must be able to explain every line you submit, on request. Undisclosed AI us
 
 ## Expected output
 
-The values you type at the prompts may differ: different analyst, indicator, source, or score. The record layout must not: the prompts, the `Intake started by` echo from Part 1, the corrected banner from Part 2, the blank line, and the tab-indented `[IOC RECORD]` block must match exactly.
+The values you type at the prompts may differ from this sample: a different analyst, indicator, source, or score. The layout must match exactly. That covers the prompts, the `Intake started by` echo from Part 1, the corrected banner from Part 2, the blank line, and the tab-indented `[IOC RECORD]` block.
 
 ```text
 Analyst name: dana_reyes

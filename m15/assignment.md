@@ -2,21 +2,21 @@
 
 ## What you are doing, and why
 
-You will turn a jumble of timestamped events into the chronological timeline that anchors an incident report. Back in M02 you computed dwell time by subtracting one bare hour number from another, which only worked because that incident conveniently started and ended on the same day. Real incidents span days, and in this module you solve the same problem with the real tools: parsing timestamp strings into `datetime` objects with `strptime`, sorting them, measuring gaps as `timedelta`s, formatting output with `strftime`, and using the `calendar` module for the report's month grid.
+You will write a program that puts timestamped events in order and prints the timeline for an incident report. In M02 you found dwell time by subtracting one hour number from another, which worked only because that incident started and ended on the same day. This incident runs across several days, so you use the date tools from this module. You parse timestamp strings into `datetime` objects with `strptime`, sort them, measure the gaps as `timedelta` values, and format the output with `strftime`. You also use the `calendar` module to print the report's month grid and the `os` module to file the finished report in a folder under a dated name.
 
 ## Scenario
 
-The hunt you ran in M14 for **Harborwatch Security** turned up six timestamped events on the client's network, and now the client is asking the question every incident report must answer: **how long were they inside, and what happened when?** The events were recovered in the order the hunt found them, not the order they happened. Your lead wants a program that puts them in order, shows the gap between each step of the intrusion, computes total dwell time, and stamps the report with when it was generated.
+The hunt you ran in M14 for **Harborwatch Security** found six timestamped events on the client's network. The client wants to know **how long the intruders were inside, and what happened when**. The events are listed in the order the hunt found them, which is not the order they happened. Your lead wants a program that puts them in order, shows the gap between each event and the one before it, computes total dwell time, stamps the report with the time it was generated, and files a summary in the case folder under a dated name.
 
 ## What you are given
 
-- [Starter file](m15_firstname_lastname.py). A header docstring to complete, the six recovered events already provided as a list of `(description, timestamp)` tuples, and three parts: working code to read, working code to modify, and six requirements you design and build yourself.
+- [Starter file](m15_firstname_lastname.py). A header docstring to complete, the six recovered events already provided as a list of `(description, timestamp)` tuples, and three parts: working code to read, working code to modify, and seven requirements you design and build yourself.
 
 ## Instructions
 
-Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own. This time the create step changes: every starter until now handed you the pseudocode, and from here the design step is yours, which is how the job works.
+Work in three steps: **read** the working code, **modify** it, then **create** your own. Every starter before this one gave you the pseudocode for the create step. In this one, Part 3 has no pseudocode, so you write it yourself before you write the code.
 
-Two functions do all the string work in this module, and both speak the same little format-code language: `datetime.strptime(text, format)` reads a string in and returns a `datetime`; `some_datetime.strftime(format)` writes a string out. The codes you need:
+Two functions do the string work in this module, and both use the same format codes. `datetime.strptime(text, format)` reads a string and returns a `datetime`. `some_datetime.strftime(format)` takes a `datetime` and returns a string. The codes you need:
 
 | Code | Meaning | Example |
 | --- | --- | --- |
@@ -28,13 +28,29 @@ Two functions do all the string work in this module, and both speak the same lit
 | `%a` | weekday name, short | `Mon` |
 | `%b` | month name, short | `Jul` |
 
-One warning before you start: `%m` is **month** and `%M` is **minute**. Swap them and Python will not raise an error. It will cheerfully parse minutes as months and hand you dates that look plausible and are wrong. If your gaps or your dwell time look bizarre, check your format string first.
+`%m` is **month** and `%M` is **minute**. If you swap them, Python raises no error. It reads the minutes as a month and returns a date that looks plausible and is wrong. If your gaps or your dwell time look wrong, check your format string first.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m15_jane_doe.py` for Jane Doe. Keep the `m15_` prefix.
-2. **Read.** Look at the `EVENTS` list and `TIMESTAMP_FORMAT` at the top of the starter: the six events are given; do not edit them. Part 1 is already complete: it takes one event's timestamp string, parses it into a `datetime` object with `datetime.strptime()`, and prints it twice: the raw string, then the same moment reformatted with `strftime()`. Run the program and compare the two lines.
-3. **Modify.** Part 2 prints that same moment in timeline style, but the format string is missing the weekday. Change `"%b %d, %H:%M"` to `"%a %b %d, %H:%M"` and run again. `%a` adds the short weekday name, and this is exactly the format your timeline will use.
-4. **Create.** Part 3 lists six requirements and no pseudocode. For each requirement, first write your own pseudocode as comments in the starter's usual style (UPPERCASE verbs, one line per line of code), then translate it into Python beneath. Your pseudocode stays in the file and is part of what you submit. The six requirements: parse every event into a list of `(datetime, description)` tuples; sort the list with plain `.sort()` (the `datetime` comes first in each tuple, so no sort key is needed); print the timeline with each event's gap since the previous one as a `timedelta` (the first event prints `(first event)` instead); compute dwell time (the `Detection` event's `datetime` minus the earliest), printed as a `timedelta` and as whole hours; stamp the report with `datetime.now()`; and print the compromise month's grid with `calendar.month()` plus its caption line.
-5. Run the program, check your timeline, gaps, dwell time, and calendar grid against the expected output below, then complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot.
+2. **Read.** Part 1 is already complete. Run the program first.
+   - Look at the `EVENTS` list and `TIMESTAMP_FORMAT` at the top of the starter. The six events are given. Do not edit them.
+   - Part 1 takes one event's timestamp string and parses it into a `datetime` object with `datetime.strptime()`.
+   - It then prints that moment twice: the raw string, then the same moment reformatted with `strftime()`. Compare the two lines in the output.
+3. **Modify.** Part 2 prints that same moment in timeline style, but the format string is missing the weekday. Change `"%b %d, %H:%M"` to `"%a %b %d, %H:%M"` and run again. `%a` adds the short weekday name. Your timeline in Part 3 uses this same format.
+4. **Create.** Part 3 lists seven requirements and no pseudocode. For each requirement, first write your own pseudocode as comments in the starter's usual style (UPPERCASE verbs, one line per line of code). Then translate it into Python beneath the comments. Your pseudocode stays in the file and is part of what you submit. The seven requirements:
+   - Parse every event into a list of `(datetime, description)` tuples.
+   - Sort the list with plain `.sort()`. The `datetime` comes first in each tuple, so no sort key is needed.
+   - Print the timeline. Each event shows its gap since the previous event as a `timedelta`. The first event prints `(first event)` instead.
+   - Compute dwell time: the `Detection` event's `datetime` minus the earliest one. Print it as a `timedelta` and as whole hours.
+   - Stamp the report with `datetime.now()`.
+   - Print the compromise month's grid with `calendar.month()`, then its caption line.
+   - File the report with the `os` module, in this order:
+      - Make a folder named `case_files` with `os.mkdir()`. Catch `FileExistsError` so a second run carries on.
+      - Write a two-line summary to `case_files/draft.txt`.
+      - Build the final file name: `timeline_` plus the earliest event's date.
+      - Check `os.listdir()` for a file that already has the final name. If there is one, delete it with `os.remove()`.
+      - Rename the draft to the final name with `os.rename()`. Remove first because `os.rename()` raises an error on Windows when the new name is taken, and on macOS and Linux it overwrites the file with no message. Removing the old file makes your program do the same thing on every computer and on every run.
+      - Print the two filing lines.
+5. Run the program twice. Check your timeline, gaps, dwell time, calendar grid, and the two filing lines against the expected output below. Confirm the second run ends the same way as the first. Open `case_files` and read the file your program made. Then complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. The reflection prompt in the starter also asks you to explain the difference between %m and %M in a format string.
 
 Open notes and open book are both fine. Respond in your own words; do not copy from other sources.
 
@@ -56,7 +72,7 @@ You must be able to explain every line you submit, on request. Undisclosed AI us
 
 ## Expected output
 
-One line in this sample depends on the moment you run it: the `Report generated` stamp will match your run, not this sample. Everything else (the Part 1 and Part 2 lines, the event order, every gap, the dwell time, the calendar grid, and the layout) must match exactly.
+One line depends on when you run the program: the `Report generated` stamp shows the time of your run. Everything else must match this sample exactly: the Part 1 and Part 2 lines, the event order, every gap, the dwell time, the calendar grid, the two filing lines, and the layout.
 
 ```text
 Raw timestamp from the list: 2026-07-16 03:12
@@ -84,12 +100,22 @@ Mo Tu We Th Fr Sa Su
 27 28 29 30 31
 
 Compromise began this month, on Mon Jul 13.
+
+Report filed: case_files/timeline_2026-07-13.txt
+Files in case_files: ['timeline_2026-07-13.txt']
+```
+
+The file your program writes, `case_files/timeline_2026-07-13.txt`, holds two lines:
+
+```text
+Incident timeline: 6 events
+Dwell time: 5 days, 4:43:00 (124 whole hours)
 ```
 
 ## What to submit
 
-Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
+Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed. Do not upload the `case_files` folder. I run your program, and it makes the folder again.
 
-Before you upload, confirm four things: the file is renamed with your own name, it runs without errors and matches the expected output, every header field contains your text rather than the placeholder text, and the Part 3 pseudocode comments are your own writing.
+Before you upload, confirm four things: the file is renamed with your own name, it runs without errors and matches the expected output, every header field contains your text and no placeholder text, and the Part 3 pseudocode comments are your own writing.
 
 If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

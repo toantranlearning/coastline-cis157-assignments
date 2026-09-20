@@ -2,11 +2,11 @@
 
 ## What you are doing, and why
 
-You will write a program that reads a URL and scores how suspicious it looks, using nothing but the string operations from this module (`lower()`, `strip()`, `count()`, `startswith()`, and the `in` operator), plus the conditionals you already know. No regular expressions, no URL libraries: every red flag a phishing link carries is visible to plain string code, and building the checks by hand teaches you what the fancy tools are actually doing.
+You will write a program that reads a URL and scores how suspicious it looks. It uses the string operations from this module (`lower()`, `strip()`, `count()`, `startswith()`, and the `in` operator) and the conditionals you already know. Do not use regular expressions or URL libraries. Every check in this assignment can be written with plain string code.
 
 ## Scenario
 
-Half of the incident tickets at **Harborwatch Security** start the same way: "I clicked a link." Your lead wants a first-pass triage tool: something an analyst can paste a reported URL into and get an immediate read on how phishy it looks, with a reason for every point of suspicion. It will not replace a real scanner, but it will tell the analyst which tickets to escalate first. That is this assignment: prompt for a URL, run it through a set of string checks, print a reason line for each red flag, and deliver a verdict.
+At **Harborwatch Security**, many incident tickets begin with someone clicking a link. Your lead wants a first-pass triage tool: an analyst pastes in a reported URL and uses the result to decide which tickets to escalate first. Your program prompts for a URL, runs it through a set of string checks, prints a reason line for each red flag, and prints a verdict.
 
 ## What you are given
 
@@ -14,21 +14,23 @@ Half of the incident tickets at **Harborwatch Security** start the same way: "I 
 
 ## Instructions
 
-Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
+Work in three steps: **read** the working code, **modify** it, then **create** your own from the pseudocode in the starter.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m10_jane_doe.py` for Jane Doe. Keep the `m10_` prefix.
-2. **Read.** Part 1 is already complete: it calls `.lower()` and `.count(".")` on a sample URL. Run the program and match each printed line to the method call that produced it. Note the comment: `.lower()` returns a **new** lowercase string; strings are immutable, so no method ever edits a string in place.
-3. **Modify.** Part 2 defines `KEYWORDS`, the list of suspicious words your analyzer will scan for. Analysts just flagged a wave of "account" lures. Add `"account"` to the end of the list and run again; the printout should now show five keywords.
-4. **Create.** Part 3 has no code yet, only pseudocode. Follow it line by line to build the analyzer. Each red flag adds 1 to a suspicion score and prints a `[+1]` reason line; a passed check prints `[OK]`:
-   - Prompt for a URL, then normalize it by chaining `.lower()` and `.strip()` into a new variable and print it on an `Analyzing:` line.
+2. **Read.** Part 1 is already complete. It calls `.lower()` and `.count(".")` on a sample URL. Run the program and match each printed line to the method call that produced it. Then read the comment: `.lower()` returns a **new** lowercase string. Strings are immutable, so no method ever edits a string in place.
+3. **Modify.** Part 2 defines `KEYWORDS`, the list of suspicious words your analyzer will scan for. Analysts have flagged a wave of "account" lures. Add `"account"` to the end of the list and run again. The printout should now show five keywords.
+4. **Create.** Part 3 has no code yet, only pseudocode. Follow it line by line to build the analyzer. Each red flag adds 1 to a suspicion score and prints a `[+1]` reason line. A check that passes prints an `[OK]` line. The pseudocode gives the exact wording of every line.
+   - Prompt for a URL. Normalize it by chaining `.lower()` and `.strip()` into a new variable, then print it on an `Analyzing:` line.
    - Print a `--- Checks ---` header and set the suspicion score to `0`.
-   - Length check with `len()`: over 75 characters is a red flag: very long URLs hide their real destination.
-   - Credential trick: `"@" in url`. Browsers ignore everything before an `@`, so the trusted name is bait.
-   - Dot count with `.count(".")`: more than 3 suggests subdomains stacked up to bury the real domain.
-   - Keywords, encryption, and the verdict: for each word in `KEYWORDS`, the `in` operator tells you whether it appears in the URL. Each hit adds 1 with its own reason line. A URL that fails `.startswith("https")` adds one more: the connection is not encrypted. Then print a `--- Verdict ---` header and the score, and map it through `if`/`elif`/`else`: 4 or more is `[LIKELY PHISHING]`, 2 or 3 is `[SUSPICIOUS]`, otherwise `[CLEAN]`.
-   - One last utility: define a function `is_palindrome(text)` that lowercases the text and returns whether it equals its own reverse, using slicing with `[::-1]`. Call it on `"racecar"` and `"harborwatch"` and print both results. A palindrome checker is the classic proof of the slicing skill this module teaches.
-5. Run the program one last time against the URL in the expected output below and check that every line matches.
-6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. Every program you submit in this course carries this header; professionals sign their work, and so do you.
+   - Length check: use `len()`. Over 75 characters is a red flag, because a very long URL hides its real destination.
+   - Credential trick: test `"@" in url`. Browsers ignore everything before an `@`, so a trusted name placed in front of it is bait.
+   - Dot count: use `.count(".")`. More than 3 dots is a red flag, because subdomains stacked up bury the real domain.
+   - Keywords: for each word in `KEYWORDS`, use the `in` operator to test whether the word appears in the URL. Each hit adds 1 and prints its own reason line.
+   - Encryption: a URL that fails `.startswith("https")` adds 1, because the connection is not encrypted.
+   - Verdict: print a `--- Verdict ---` header and the score. Then map the score through `if`/`elif`/`else`: 4 or more is `[LIKELY PHISHING]`, 2 or 3 is `[SUSPICIOUS]`, otherwise `[CLEAN]`.
+   - Palindrome check: define a function `is_palindrome(text)` that lowercases the text and returns whether it equals its own reverse, using slicing with `[::-1]`. Call it on `"racecar"` and `"harborwatch"` and print both results.
+5. Run the program one last time. Enter the URL shown in the expected output below and check that every line matches.
+6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. The reflection prompt in the starter also asks you to explain what the "in" operator does when used with two strings, as in "login" in url.
 
 Open notes and open book are both fine. Respond in your own words; do not copy from other sources.
 
@@ -50,7 +52,7 @@ You must be able to explain every line you submit, on request. Undisclosed AI us
 
 ## Expected output
 
-The URL you analyze may differ; the format of the check lines and the verdict must not.
+The URL you analyze may differ. The format of the check lines and the verdict must match this.
 
 ```text
 Lowercased: http://example.com/login

@@ -2,32 +2,54 @@
 
 ## What you are doing, and why
 
-You will build a complete console game (a battleship-style hunt on a 3x3 grid) using everything from the first half of this course working together in one program: nested lists for the grid, functions to organize the work, a `while` loop to run the game, conditionals to validate input and resolve each move, booleans to track the outcome, and f-strings to report status. Every module assignment so far exercised one or two of these at a time; the midterm is where they have to cooperate. This project is worth **60 points**, roughly double a module assignment, and the page below is proportionally fuller: read all of it before you write a line of code.
+You will build a complete console game: a battleship-style hunt on a 3x3 grid. It uses the Python from the first half of this course in one program: nested lists for the grid, functions to organize the work, a `while` loop to run the game, conditionals to check input and resolve each move, booleans to track the outcome, and f-strings to report status. This project is worth **60 points**, about double a module assignment, and this page is longer than usual. Read all of it before you write any code.
 
 ## Scenario
 
-The Harborwatch Security team runs a tabletop exercise every quarter to keep hunt instincts sharp, and your lead has asked you to build this year's edition. The setup: an intruder is hiding on one host in a client's 3x3 network grid, and the analyst playing the exercise has a limited budget of probes to find them. Each probe checks one host and comes back clean or finds the intruder. Four probes, nine hosts: the analyst who probes carelessly runs out of budget and loses the intruder. Your program is the exercise: it hides the intruder, draws the grid, takes the probes, and calls the result.
+**Harborwatch Security** runs a tabletop exercise every quarter, and your lead has asked you to build this year's edition. An intruder is hiding on one host in a client's 3x3 network grid, and the analyst playing has 4 probes to find the intruder among the 9 hosts. Each probe checks one host and either comes back clean or finds the intruder. Your program hides the intruder, draws the grid, takes the probes, and reports the result.
 
 ## What you are given
 
-- [Starter file](midterm_firstname_lastname.py). A header docstring to complete and the same three parts as every assignment: a complete, working board-display function to read and run, a banner with a probe-budget constant to modify, and the rest of the game (two more functions and the main program) to create from full line-by-line pseudocode, seven steps in all, ordered so that each one builds on the previous.
+- [Starter file](midterm_firstname_lastname.py). A header docstring to complete and three parts: a complete, working board-display function to read and run, a banner with a probe-budget constant to modify, and the rest of the game (two more functions and the main program) to create from line-by-line pseudocode in seven steps. Each step builds on the one before it.
 
 ## Instructions
 
-Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. The midterm keeps the rhythm. It is just bigger at the create end: Part 3 is seven pseudocode steps instead of one, and it is where most of the 60 points live.
+Work in three steps: **read** the working code, **modify** it, then **create** your own from the pseudocode in the starter. On the midterm the create step is the large one: Part 3 has seven pseudocode steps, and most of the 60 points are there.
 
 1. Download the starter file and rename it with your own name, all lowercase: `midterm_jane_doe.py` for Jane Doe. Keep the `midterm_` prefix.
 2. Read the whole starter before you write anything, so you can see how the three parts fit together into one game.
-3. **Read.** Part 1 is a complete function, `display_board(board)`, plus two demo lines that draw a mid-game sample board. Run the program and study the grid: column numbers across the top, row numbers down the left side, and one character per host: `.` for an unprobed host, `o` for a host probed and found clean, `X` for the intruder once found. This function already matches the board format in the expected output below exactly, including the `+---+` grid lines; the rest of the game calls it as-is.
-4. **Modify.** Part 2 prints the exercise banner, but the starter still announces last year's probe budget. Change `PROBES` from `5` to `4`, run again, and confirm the banner reports 4 probes. Change only the constant: the banner's f-string and the rest of the game read `PROBES`, so the whole program follows.
-5. **Create.** Part 3 is the rest of the game, in seven steps, each with complete line-by-line pseudocode. Translate each line rather than inventing your own structure. Build one step at a time and run after every step, not just at the end. Step 3.1 deletes Part 1's two demo lines: the finished game builds its own board and must not print the sample grid.
-6. Steps 3.2 and 3.3 are the game's other two functions. First one input-validation function, used for both the row and the column: it takes a label (`"row"` or `"column"`), prompts with it, and keeps asking until it gets an integer from 0 to 2: `try`/`except` for input that is not a number, a conditional for numbers off the grid. Invalid input never costs a probe; the function simply explains the problem and asks again. Then a probe-resolution function: on a hit it marks the host `X` and returns `True`, otherwise it marks the host `o` and returns `False`. This function is where the game's booleans live.
-7. Step 3.4 is the opening: ask for the client **case number** (an integer: validate it the same `try`/`except` way). The intruder's position is derived from it: `position = case_number % 9`, then `row = position // 3` and `column = position % 3`. This is a deliberate trick, and the page is being honest with you about it: real programs would place the intruder randomly, but Python's `random` module is not covered until M09, so until then we squeeze an unpredictable-feeling position out of whatever number the user types. Try a few case numbers and notice how the position jumps around. When you meet `random` in M09, you will retire this trick.
-8. Steps 3.5 through 3.7 are the game itself. Build the board as a **list of three lists**, every host starting as `"."`, with the game state beside it: `PROBES` probes remaining and a boolean, `False` to start, recording whether the intruder has been found. Then the main `while` loop, one turn per pass: display the board, print an f-string status line (probes remaining, hosts cleared: count the `o` marks), get a row and a column with your validation function. An already-probed host costs no probe. Say so and go around again; a real analyst does not pay to re-check a host they already cleared. Otherwise spend one probe and resolve it with your probe-resolution function. Finally the ending: display the final board, then the win line, or the lose line revealing the intruder's host. Match both lines to the expected output exactly.
-9. Play at least three full games: one you win, one you lose, and one where you feed the program garbage (letters, numbers off the grid, hosts you already probed) and confirm none of it costs a probe or crashes the program.
-10. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. Every program you submit in this course carries this header; professionals sign their work, and so do you.
+3. **Read.** Part 1 is a complete function, `display_board(board)`, plus two demo lines that draw a sample board from the middle of a game. Run the program and study the grid.
+   - Column numbers run across the top, and row numbers run down the left side.
+   - Each host is one character: `.` for a host not yet probed, `o` for a host probed and found clean, and `X` for the intruder once found.
+   - The function already matches the board format in the expected output below exactly, including the `+---+` grid lines. Do not change it. The rest of the game calls it as it is.
+4. **Modify.** Part 2 prints the exercise banner, but the starter still has last year's probe budget.
+   - Change `PROBES` from `5` to `4`, run again, and confirm the banner reports 4 probes.
+   - Change only the constant. The banner's f-string and the rest of the game read `PROBES`, so the whole program follows.
+5. **Create.** Part 3 is the rest of the game, in seven steps. Each step has complete line-by-line pseudocode.
+   - Translate each line of the pseudocode. Do not invent your own structure.
+   - Build one step at a time, and run the program after every step, not only at the end.
+   - Step 3.1 deletes the two demo lines from Part 1. The finished game builds its own board and must not print the sample grid.
+6. Steps 3.2 and 3.3 are the game's other two functions.
+   - Step 3.2 is one input-validation function, used for both the row and the column. It takes a label (`"row"` or `"column"`), uses the label in its prompt, and keeps asking until it gets an integer from 0 to 2.
+   - Inside it, use `try`/`except` to catch input that is not a number, and a conditional to catch numbers that are off the grid.
+   - Invalid input never costs a probe. The function explains the problem and asks again.
+   - Step 3.3 is the probe-resolution function. On a hit it marks the host `X` and returns `True`. Otherwise it marks the host `o` and returns `False`. The game's boolean values come from this function.
+7. Step 3.4 is the opening. Ask for the client **case number**, which is an integer. Validate it with `try`/`except`, as you did for the row and column.
+   - Work out the intruder's position from the case number: `position = case_number % 9`, then `row = position // 3` and `column = position % 3`.
+   - A real program would place the intruder at random, but Python's `random` module is not covered until M09. Until then, the case number the user types stands in for it and gives a position that is hard to predict.
+   - Try a few case numbers and watch how the position changes. When you learn `random` in M09, you will stop using this trick.
+8. Steps 3.5 through 3.7 are the game itself.
+   - Step 3.5 sets up the board and the game state. Build the board as a **list of three lists**, with every host starting as `"."`. The game state is `PROBES` probes remaining and a boolean that starts as `False` and records whether the intruder has been found.
+   - Step 3.6 is the main `while` loop, one turn per pass. Display the board and print an f-string status line with the probes remaining and the hosts cleared. To get the hosts cleared, count the `o` marks. Then get a row and a column with your validation function.
+   - A host that was already probed costs no probe. Print the message that says so and go around the loop again. Otherwise spend one probe and resolve it with your probe-resolution function.
+   - Step 3.7 is the ending. Display the final board, then print the win line, or the lose line that reveals the intruder's host. Match both lines to the expected output exactly.
+9. Play at least three full games.
+   - One game that you win.
+   - One game that you lose.
+   - One game where you type bad input: letters, numbers off the grid, and hosts you already probed. Confirm that none of it costs a probe or crashes the program.
+10. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. The reflection prompt in the starter also asks you to explain why the case-number trick is not truly random.
 
-You do not need tuples, dictionaries, classes, file handling, or the `random` module for this project. If you have already met tuples or dictionaries and want to use them, that is allowed, but the whole game builds cleanly without them.
+You do not need tuples, dictionaries, classes, file handling, or the `random` module for this project. If you have already met tuples or dictionaries and want to use them, that is allowed. The whole game can be built without them.
 
 Open notes and open book are both fine. Respond in your own words; do not copy from other sources.
 
@@ -49,7 +71,7 @@ You must be able to explain every line you submit, on request. Undisclosed AI us
 
 ## Expected output
 
-The session below used case number `2026` and probes at row 1 column 1, an off-grid row of 5, row 0 column 0 (twice: the second one is the already-probed case), and row 0 column 1. Your session will differ (the case number, the intruder's position, and the moves are the player's), but the board format, the prompts, the status lines, and the win and lose lines must match this exactly, and the banner must report the 4-probe budget from your Part 2 change. The lose line, not shown in this winning session, is: `Out of probes. The intruder was hiding on host (row, column). You lose.` with the real coordinates filled in.
+The session below used case number `2026`. The player probed row 1 column 1, typed an off-grid row of 5, probed row 0 column 0 twice (the second time is the already-probed case), and then probed row 0 column 1. Your session will differ, because the case number, the intruder's position, and the moves are up to the player. The board format, the prompts, the status lines, and the win and lose lines must match this exactly, and the banner must report the 4-probe budget from your Part 2 change. This session is a win, so the lose line does not appear in it. The lose line is: `Out of probes. The intruder was hiding on host (row, column). You lose.` with the real coordinates filled in.
 
 ```text
 === HARBORWATCH TABLETOP: HUNT THE INTRUDER ===
@@ -127,6 +149,6 @@ You found the intruder. The network is secure -- you win!
 
 Upload **one** `.py` file: no document, no screenshots. It is the starter you downloaded, renamed with your own name and completed.
 
-Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and plays a complete game (win and lose) in the format shown above, and every header field contains your text, not the placeholder text.
+Before you upload, confirm three things: the file is renamed with your own name, it runs without errors and plays a complete game (both a win and a loss) in the format shown above, and every header field contains your text, not the placeholder text.
 
 If you get stuck, post a question in this module's discussion, but share no more than three lines of your code there, so your post is a question and not a solution.

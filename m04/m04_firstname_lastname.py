@@ -15,8 +15,8 @@ monitoring stage of this program.]
 '''
 
 # ---- Part 1: READ -----------------------------------------------------
-# The lines below are already complete. Run the program (green Run
-# button, or F5) and watch the Shell pane. The for loop with range()
+# The lines below are already complete. Run the program and watch the
+# output. The for loop with range()
 # counts 3, 2, 1 (range(3, 0, -1) starts at 3, stops before 0, and
 # steps by -1), then a separator banner and the analyst's instructions
 # print once. Until you build Part 3, the program ends right after.

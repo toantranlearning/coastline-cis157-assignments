@@ -2,11 +2,11 @@
 
 ## What you are doing, and why
 
-You will sort a list of alert severity scores with a **bubble sort you write yourself**: nested loops, comparing neighbors, swapping them when they are out of order. Python has `sorted()` and `.sort()`, and after this module you will use them; in this module they are prohibited, because the point is to see what sorting *is* before you let the language do it for you. Along the way you will grow a list with `append()`, scan it with a loop to find its extremes, and walk it backward. These are the core list skills this module is about.
+You will sort a list of alert severity scores with a **bubble sort you write yourself**. A bubble sort uses nested loops: it compares neighbors and swaps them when they are out of order. Python can sort a list for you, and after this module you will use that. For this assignment, step 4 names the built-in functions you may not use. You will also grow a list with `append()`, scan it with a loop to find its highest and lowest values, and walk it backward.
 
 ## Scenario
 
-Overnight, Harborwatch's alert feed dumped a pile of severity scores (CVSS-style, 0.0 to 10.0) into the queue, and a few more came in by phone this morning. The morning threat hunter does not work the queue in arrival order; they work it **worst-first**, because a 9.8 waiting behind a 2.1 is how breaches happen. Your lead wants a small triage tool: take the overnight scores, add this morning's, put them in order, and print the queue the way a hunter should walk it.
+Harborwatch's alert feed added severity scores (CVSS-style, 0.0 to 10.0) to the queue overnight, and two more came in by phone this morning. The morning threat hunter works the queue **worst-first**, so a score of 9.8 is handled before a score of 2.1 that arrived earlier. Your lead wants a small triage tool that takes the overnight scores, adds this morning's, sorts them, and prints the queue in the order the hunter works it.
 
 ## What you are given
 
@@ -14,14 +14,19 @@ Overnight, Harborwatch's alert feed dumped a pile of severity scores (CVSS-style
 
 ## Instructions
 
-Every assignment in this course follows the same three-step rhythm: **read** working code, **modify** working code, then **create** your own from the pseudocode in the starter. Reading and changing real code before writing your own is how programmers actually learn a codebase, and it is how you will learn Python.
+Work in three steps: **read** the working code, **modify** it, then **create** your own from the pseudocode in the starter.
 
 1. Download the starter file and rename it with your own name, all lowercase: `m05_jane_doe.py` for Jane Doe. Keep the `m05_` prefix.
-2. **Read.** Part 1 is already complete: the overnight severity scores are pre-loaded as a list, and a loop prints each one. Run the program and watch the loop walk the list, one score per line.
-3. **Modify.** Part 2 appends one phoned-in score, but the value is wrong. Change `0.5` to `4.7`, then add one more `append()` line for the second phoned-in score, `6.9`. Run again. The appends print nothing yet, but the list has grown.
-4. **Create.** Part 3 has no code yet: only pseudocode, in five steps. Follow each step line by line: print the list **before** sorting; find the highest and lowest score by scanning with a loop (no `max()` or `min()`); sort **ascending** with a hand-written **bubble sort**: an outer loop for the passes, an inner loop that compares each pair of neighbors and swaps them when the left one is bigger, and no `sorted()` or `.sort()`, because writing the swap yourself is the point of this assignment; print the list **after** sorting; then print the triage order **worst-first** by walking the sorted list in reverse, one score per line with its priority number.
-5. Run the program one last time and check your output against the expected output below: every line, in order.
-6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. Every program you submit in this course carries this header; professionals sign their work, and so do you.
+2. **Read.** Part 1 is already complete. The overnight severity scores are pre-loaded as a list, and a loop prints each one. Run the program and watch the loop walk the list, one score per line.
+3. **Modify.** Part 2 appends one phoned-in score, but the value is wrong. Change `0.5` to `4.7`. Then add one more `append()` line for the second phoned-in score, `6.9`. Run again. The output does not change yet, because `append()` prints nothing. The list now holds two more scores.
+4. **Create.** Part 3 has no code yet, only pseudocode, in five steps. Turn each step into Python, line by line, in order. Do not use `sorted()`, `.sort()`, `max()`, or `min()` anywhere in Part 3. Writing the loops yourself is the requirement.
+   - Print the list **before** sorting.
+   - Find the highest and the lowest score by scanning the list with a loop.
+   - Sort the list **ascending** with a hand-written **bubble sort**. Use an outer loop for the passes and an inner loop that compares each pair of neighbors. Swap the pair when the left one is bigger.
+   - Print the list **after** sorting.
+   - Print the triage order **worst-first**. Walk the sorted list in reverse and print one score per line with its priority number.
+5. Run the program one last time and check that every line matches the expected output below, in order.
+6. Complete the header at the top of the file: `NAME`, `DATE`, `DESCRIPTION`, and the `REFLECTION` slot. The reflection prompt in the starter also asks you to explain how bubble sort decides when to swap two neighbors.
 
 Open notes and open book are both fine. Respond in your own words; do not copy from other sources.
 
@@ -43,7 +48,7 @@ You must be able to explain every line you submit, on request. Undisclosed AI us
 
 ## Expected output
 
-The scores are fixed by the starter and your Part 2 change, so your output must match this exactly: every line, in order.
+The scores come from the starter and your Part 2 change, so the program prints the same report on every run. Your output must match this exactly, line for line.
 
 ```text
 Overnight scores in the queue:

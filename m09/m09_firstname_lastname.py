@@ -14,13 +14,13 @@ Also briefly explain what the __name__ variable is for.]
 '''
 
 # ---- Part 3: CREATE ---------------------------------------------------
-# This file has no code yet -- only pseudocode. Parts 1 and 2 live in
+# This file has no code yet, only pseudocode. Parts 1 and 2 live in
 # huntkit.py; do those first, and keep huntkit.py in the same folder as
 # this file. Then work the five steps below in order, turning the
 # pseudocode into code.
 
 # 3.1 Import the whole module. When you run this file, huntkit's
-#     self-test does NOT print -- importing sets __name__ to "huntkit",
+#     self-test does NOT print, because importing sets __name__ to "huntkit",
 #     not "__main__".
 #
 # Pseudocode:
@@ -37,7 +37,7 @@ Also briefly explain what the __name__ variable is for.]
 #       PRINT the result as-is
 # TODO: your code here
 
-# 3.3 Import one name directly, then call it bare -- no module name in
+# 3.3 Import one name directly, then call it bare, with no module name in
 #     front.
 #
 # Pseudocode:
