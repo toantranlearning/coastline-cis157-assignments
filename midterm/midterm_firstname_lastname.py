@@ -1,7 +1,7 @@
 '''
 NAME: First Last
 COURSE: CIS C157 - Introduction to Python Programming
-ASSIGNMENT: Midterm Project - Hunt the Intruder
+ASSIGNMENT: Midterm Project: Hunt the Intruder
 DATE: YYYY-MM-DD
 
 DESCRIPTION:

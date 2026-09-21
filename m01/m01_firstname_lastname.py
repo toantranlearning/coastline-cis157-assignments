@@ -1,7 +1,7 @@
 '''
 NAME: First Last
 COURSE: CIS C157 - Introduction to Python Programming
-ASSIGNMENT: M01 Assignment 1 - Write Your First Python Program
+ASSIGNMENT: M01 Assignment - Write Your First Python Program
 DATE: YYYY-MM-DD
 
 DESCRIPTION:

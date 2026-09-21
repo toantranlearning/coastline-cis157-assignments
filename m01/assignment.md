@@ -1,4 +1,4 @@
-# M01: Assignment 1 - Write Your First Python Program
+# M01 Assignment - Write Your First Python Program
 
 ## What you are doing, and why
 
